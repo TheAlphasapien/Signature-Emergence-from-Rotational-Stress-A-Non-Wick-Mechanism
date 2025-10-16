@@ -1,0 +1,109 @@
+\subsection{Euclidean Kerr Near-Horizon Expansion}
+
+\subsubsection{The Kerr Metric in Boyer-Lindquist Coordinates}
+
+The Kerr metric in standard Boyer-Lindquist coordinates is:
+\begin{equation}
+ds^2 = -\frac{\Delta}{\Sigma}(dt - a\sin^2\theta\, d\phi)^2 + \frac{\Sigma}{\Delta}dr^2 + \Sigma d\theta^2 + \frac{\sin^2\theta}{\Sigma}[(r^2+a^2)d\phi - a\,dt]^2
+\end{equation}
+where:
+\begin{align}
+\Delta &= r^2 - 2Mr + a^2 \\
+\Sigma &= r^2 + a^2\cos^2\theta \\
+a &= J/M
+\end{align}
+
+The outer horizon is located at:
+\begin{equation}
+r_+ = M + \sqrt{M^2 - a^2}
+\end{equation}
+
+\subsubsection{Wick Rotation to Euclidean Signature}
+
+Apply the Wick rotation $t \to -i\tau$ where $\tau$ is real Euclidean time. The metric becomes:
+\begin{equation}
+ds^2_E = \frac{\Delta}{\Sigma}(d\tau + a\sin^2\theta\, d\phi)^2 + \frac{\Sigma}{\Delta}dr^2 + \Sigma d\theta^2 + \frac{\sin^2\theta}{\Sigma}[(r^2+a^2)d\phi + ia\,d\tau]^2
+\end{equation}
+
+After algebraic simplification, this can be written as:
+\begin{equation}
+ds^2_E = \frac{\Sigma}{\Delta}dr^2 + \Sigma d\theta^2 + (r^2+a^2)\sin^2\theta\, d\phi^2 + \frac{\Delta}{\Sigma}[d\tau + a\sin^2\theta\, d\phi]^2
+\end{equation}
+
+\subsubsection{Near-Horizon Expansion}
+
+Define the near-horizon coordinate:
+\begin{equation}
+\rho = r - r_+
+\end{equation}
+
+Expand $\Delta$ near the horizon:
+\begin{align}
+\Delta &= r^2 - 2Mr + a^2 \\
+&= (r - r_+)(r - r_-) \\
+&\approx (r_+ - r_-)\rho + O(\rho^2)
+\end{align}
+
+Define the surface gravity:
+\begin{equation}
+\kappa = \frac{r_+ - r_-}{2(r_+^2 + a^2)} = \frac{\sqrt{M^2-a^2}}{2M^2 - a^2 + 2M\sqrt{M^2-a^2}}
+\end{equation}
+
+Then:
+\begin{equation}
+\Delta \approx 2\kappa(r_+^2 + a^2)\rho
+\end{equation}
+
+\subsubsection{The Conical Singularity}
+
+Near the horizon at the equatorial plane ($\theta = \pi/2$), the metric becomes approximately:
+\begin{equation}
+ds^2_E \approx \frac{r_+^2 + a^2}{2\kappa\rho}d\rho^2 + \frac{2\kappa\rho}{r_+^2 + a^2}[d\tau + a\,d\phi]^2 + (r_+^2+a^2)d\phi^2
+\end{equation}
+
+Introducing the coordinate $r'^2 = \frac{r_+^2 + a^2}{\kappa}\rho$ near $\rho = 0$:
+\begin{equation}
+ds^2_E \approx dr'^2 + (2\kappa r')^2 \left[\frac{d\tau + a\,d\phi}{2\sqrt{(r_+^2+a^2)\kappa}}\right]^2 + \ldots
+\end{equation}
+
+This has the form:
+\begin{equation}
+ds^2 \approx dr'^2 + r'^2 d\chi^2
+\end{equation}
+where:
+\begin{equation}
+\chi = 2\kappa\left[\frac{\tau + a\phi}{2\sqrt{(r_+^2+a^2)\kappa}}\right]
+\end{equation}
+
+\subsubsection{Regularity Condition}
+
+For the geometry to be smooth at $r' = 0$ (the horizon), the angular coordinate $\chi$ must have period $2\pi$. This requires:
+\begin{equation}
+\tau \sim \tau + \beta
+\end{equation}
+where:
+\begin{equation}
+\boxed{\beta = \frac{4\pi}{\kappa} = \frac{1}{T_H}}
+\end{equation}
+
+This is the Hawking temperature relation. Without this periodicity condition, the geometry has a conical singularity at the horizon—a coordinate singularity that signals geometric pathology.
+
+\subsubsection{The Horizon Angular Velocity}
+
+The horizon angular velocity is:
+\begin{equation}
+\Omega_H = \frac{a}{r_+^2 + a^2}
+\end{equation}
+
+This creates frame-dragging in the $(\tau, \phi)$ plane, which sources vorticity in the dual fluid description.
+
+\subsubsection{Key Observation}
+
+The term $d\tau + a\sin^2\theta\, d\phi$ in the Euclidean metric shows explicit mixing between the (periodic) Euclidean time $\tau$ and the azimuthal angle $\phi$. This mixing is the geometric origin of:
+\begin{enumerate}
+\item The frame-dragging effect
+\item The vorticity in the fluid dual
+\item The rotational stress that cannot dissipate in closed periodic time
+\end{enumerate}
+
+The regularity condition $\beta = 4\pi/\kappa$ removes the conical defect geometrically but, as we demonstrate in the main text, this is equivalent to admitting the need for a Minkowski dissipative channel.

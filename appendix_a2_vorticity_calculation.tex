@@ -1,0 +1,125 @@
+\subsection{Vorticity Calculation in Fluid Dual}
+
+\subsubsection{Fluid/Gravity Correspondence}
+
+The fluid/gravity correspondence relates dynamics at a black hole horizon to viscous fluid flow on a stretched horizon membrane. For a Kerr black hole, the key dictionary elements are:
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Gravity (Bulk)} & \textbf{Fluid (Boundary)} \\
+\hline
+Horizon location $r_+$ & Membrane position \\
+Frame-dragging $g_{t\phi}$ & Fluid velocity field $\mathbf{u}$ \\
+Surface gravity $\kappa$ & Temperature $T_H = \kappa/(2\pi)$ \\
+Horizon area $A_H$ & Entropy $S = A_H/4$ \\
+Angular momentum $J$ & Vorticity $\omega$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Frame-Dragging and Velocity Field}
+
+The Kerr metric frame-dragging term in the $(\tau, \phi)$ sector is:
+\begin{equation}
+g_{\tau\phi} = -\frac{a r \sin^2\theta}{\Sigma}
+\end{equation}
+
+Near the horizon ($r \to r_+$), at the equatorial plane ($\theta = \pi/2$):
+\begin{equation}
+g_{\tau\phi}(r_+) = -\frac{a r_+}{r_+^2 + a^2}
+\end{equation}
+
+The frame-dragging velocity in the fluid dual is:
+\begin{equation}
+u_\phi = \Omega_H r_+ = \frac{a r_+}{r_+^2 + a^2}
+\end{equation}
+
+where $\Omega_H$ is the horizon angular velocity.
+
+\subsubsection{Vorticity from Rotation}
+
+Vorticity is defined as:
+\begin{equation}
+\omega = \nabla \times \mathbf{u}
+\end{equation}
+
+For an axisymmetric flow in cylindrical-like coordinates $(r, \theta, \phi)$, with velocity $\mathbf{u} = u_\phi(r,\theta)\hat{\phi}$:
+\begin{equation}
+\omega_r = \frac{1}{r\sin\theta}\frac{\partial(u_\phi \sin\theta)}{\partial\theta}
+\end{equation}
+\begin{equation}
+\omega_\theta = -\frac{1}{r}\frac{\partial(r u_\phi)}{\partial r}
+\end{equation}
+
+\subsubsection{Explicit Calculation Near Horizon}
+
+Taking $u_\phi = \Omega_H r$ near the horizon with $\Omega_H$ approximately constant:
+\begin{equation}
+\omega_\theta = -\frac{1}{r}\frac{\partial(r \cdot \Omega_H r)}{\partial r} = -\frac{1}{r}\frac{\partial(\Omega_H r^2)}{\partial r} = -2\Omega_H
+\end{equation}
+
+The magnitude of vorticity scales as:
+\begin{equation}
+|\omega| \sim \Omega_H \sim \frac{a}{r_+^2 + a^2}
+\end{equation}
+
+For near-extremal Kerr ($a \to M$):
+\begin{equation}
+|\omega| \sim \frac{1}{M}
+\end{equation}
+
+\subsubsection{Vorticity in the Euclidean Formulation}
+
+After Wick rotation, the fluid lives on the Euclidean manifold with periodic $\tau$. The vorticity remains:
+\begin{equation}
+\omega \sim \Omega_H
+\end{equation}
+
+but now the time coordinate $\tau$ is compact. The vorticity wants to evolve:
+\begin{equation}
+\frac{\partial \omega}{\partial \tau} \neq 0
+\end{equation}
+
+However, periodicity $\tau \sim \tau + \beta$ means there can be no net evolution over one cycle. This creates the fundamental incompatibility.
+
+\subsubsection{Connection to Navier-Stokes}
+
+In the NS-spinor mapping, vorticity $\omega$ appears as the effective magnetic field in the Stern-Gerlach term:
+\begin{equation}
+\mathbf{B}_{\text{eff}} = \omega \sim \Omega_H \hat{\theta}
+\end{equation}
+
+This creates a torque on circulation elements (spinors):
+\begin{equation}
+\tau = \mu \times \mathbf{B}_{\text{eff}}
+\end{equation}
+
+The torque drives energy into smaller scales (turbulent cascade) since there is no temporal direction for dissipation in periodic Euclidean time.
+
+\subsubsection{Scaling Relations}
+
+Key dimensional scalings:
+\begin{align}
+\text{Vorticity:} \quad &\omega \sim \frac{J}{M^3} \\
+\text{Velocity:} \quad &u \sim \Omega_H r_+ \sim \frac{J}{M^2} \\
+\text{Timescale:} \quad &\tau_{\text{vortex}} \sim \frac{1}{\omega} \sim \frac{M^3}{J}
+\end{align}
+
+For extremal Kerr ($J \to M^2$):
+\begin{equation}
+\omega \sim \frac{1}{M}, \quad \tau_{\text{vortex}} \sim M
+\end{equation}
+
+\subsubsection{Physical Interpretation}
+
+The vorticity calculation demonstrates:
+\begin{enumerate}
+\item Frame-dragging in GR $\Rightarrow$ vorticity in fluid dual
+\item Vorticity magnitude $\sim \Omega_H$ (horizon angular velocity)
+\item Vorticity creates effective "magnetic field" in NS-spinor mapping
+\item Periodic Euclidean time provides no dissipation channel for vortex evolution
+\item This forces the signature flip to open temporal dimension
+\end{enumerate}
+
+The vorticity is not an artifact of the mapping—it's the fluid-dual representation of the geometric frame-dragging that creates the rotational stress requiring resolution via signature emergence.
