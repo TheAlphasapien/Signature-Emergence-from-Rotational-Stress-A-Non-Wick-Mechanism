@@ -9,7 +9,7 @@
 
 \title{Signature Emergence from Rotational Stress: A Non-Wick Mechanism}
 \author{Adam Morgan\\
-\small Institution/Affiliation}
+\small Unaffiliated}
 \date{\today}
 
 \begin{document}
@@ -17,7 +17,7 @@
 \maketitle
 
 \begin{abstract}
-We propose a physical mechanism for the emergence of Minkowski signature from Euclidean geometry based on the incompatibility of rotation with closed time dimensions. By establishing an equivalence between the Euclidean regularity condition and the requirement for temporal dissipation, we provide a non-Wick interpretation of signature selection. The Stern-Gerlach spin alignment process serves as an observable analog, while recent mappings between Navier-Stokes equations and non-Hermitian quantum spin systems provide the mathematical framework. We prove that rotation-induced vorticity creates a monodromy obstruction that prevents smooth Euclidean solutions, necessitating the opening of a Minkowski dissipative channel. This work connects the difficulty of the Navier-Stokes millennium problem to fundamental questions about spacetime signature.
+We propose a physical mechanism for the emergence of Minkowski signature from Euclidean geometry based on the incompatibility of rotation with closed time dimensions. By establishing an equivalence between the Euclidean regularity condition and the requirement for temporal dissipation, we provide a non-Wick interpretation of signature selection. The Stern-Gerlach spin alignment process serves as an observable analog, while recent mappings between Navier-Stokes equations and non-Hermitian quantum spin systems provide the mathematical framework.  We prove that rotation-induced non-Hermiticity violates Reflection Positivity, creating a Monodromy Obstruction that makes a smooth Euclidean thermal state mathematically inconsistent and necessitates the emergence of a Minkowski signature . This work connects the difficulty of the Navier-Stokes millennium problem to fundamental questions about spacetime signature.
 \end{abstract}
 
 \section{Introduction}
@@ -58,12 +58,16 @@ The Wick rotation $(t \to i\tau)$ is ubiquitous in quantum field theory and stat
 
 \subsection{This Work}
 
-We demonstrate that:
+We demonstrate that the incompatibility of rotation with closed Euclidean time is not merely a conceptual analogy but a \textbf{robust mathematical necessity} for signature selection. This work makes the following contributions:
+
 \begin{enumerate}
-\item \textbf{Rotation in Euclidean space creates unresolvable stress}
-\item \textbf{This stress manifests as NS turbulence (spatial cascade)}
-\item \textbf{Signature flip opens temporal dissipation channel}
-\item \textbf{Euclidean regularity condition $\Leftrightarrow$ Minkowski signature requirement}
+    \item \textbf{Non-Hermitian Source Term:} We utilize the Meng \& Yang Navier–Stokes $\to$ Schrödinger–Pauli Equation (SPE) mapping \cite{MengYang2024} to show that the rotation-induced vorticity of the dual Kerr boundary fluid introduces a \textbf{physical anti-Hermitian imaginary potential} $iV_I(\mathbf{x}, \tau)$ into the Euclidean generator $H_E(\tau)$ \cite{Explicit VI and Kerr scaling.txt}. We compute the scaling of this potential to be proportional to $\nu(\Omega_H r_+)^2$ for the Kerr geometry, proving $\overline{V_I} \neq 0$ \cite{Explicit VI and Kerr scaling.txt, appendix_a2_vorticity_calculation.tex}.
+
+    \item \textbf{The Monodromy Obstruction Theorem:} We prove that a non-zero, non-removable time-averaged imaginary potential $\overline{V_I}$ leads to \textbf{complex-phased eigenvalues} in the Monodromy operator $\mathcal{M}$ \cite{Monodromy obstruction subsection.txt}. This violates \textbf{Reflection Positivity} and formally demonstrates that the smooth, periodic Euclidean thermal state for a rotating black hole is \textbf{mathematically inconsistent} \cite{Monodromy obstruction subsection.txt}.
+
+    \item \textbf{Gauge Robustness:} We preemptively address the objection that $iV_I$ could be a gauge artifact, proving that the spatially-dependent viscous term $V_I(\mathbf{x}, \tau) = \nu|\nabla\psi|^2$ is \textbf{not gauge-removable} by a smooth, single-valued periodic transformation $\chi(\tau)$ \cite{Gauge-removability lemma.txt}. This establishes the robustness of the obstruction.
+
+    \item \textbf{Physical Interpretation:} The only physically consistent resolution to this Monodromy Obstruction is the emergence of a \textbf{Minkowski temporal channel} (the signature flip) that provides a non-compact, dissipative outlet for the rotational stress, thereby resolving the spectral instability \cite{appendix_a3_ns_spinor_mapping.tex}. This establishes the Euclidean regularity condition $\beta = 4\pi/\kappa$ \cite{GibbonsHawking1977} as a \textbf{mathematical fingerprint} of the required Minkowski dynamics.
 \end{enumerate}
 
 \section{Geometric Setup}
