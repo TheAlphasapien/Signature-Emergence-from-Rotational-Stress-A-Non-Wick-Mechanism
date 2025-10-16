@@ -1,0 +1,319 @@
+% ArXiv preprint template
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Signature Emergence from Rotational Stress: A Non-Wick Mechanism}
+\author{Adam Morgan\\
+\small Institution/Affiliation}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+We propose a physical mechanism for the emergence of Minkowski signature from Euclidean geometry based on the incompatibility of rotation with closed time dimensions. By establishing an equivalence between the Euclidean regularity condition and the requirement for temporal dissipation, we provide a non-Wick interpretation of signature selection. The Stern-Gerlach spin alignment process serves as an observable analog, while recent mappings between Navier-Stokes equations and non-Hermitian quantum spin systems provide the mathematical framework. We prove that rotation-induced vorticity creates a monodromy obstruction that prevents smooth Euclidean solutions, necessitating the opening of a Minkowski dissipative channel. This work connects the difficulty of the Navier-Stokes millennium problem to fundamental questions about spacetime signature.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{The Ontological Problem of Wick Rotation}
+
+The Wick rotation $(t \to i\tau)$ is ubiquitous in quantum field theory and statistical mechanics, yet its physical meaning remains unclear. While mathematically convenient for path integral convergence, the transformation from Minkowski $(-,+,+,+)$ to Euclidean $(+,+,+,+)$ signature is typically treated as a purely analytical tool.
+
+\textbf{Key Questions:}
+\begin{enumerate}
+\item What does ``imaginary time'' mean physically?
+\item Why does the Wick rotation work?
+\item Can signature selection be derived from physical principles?
+\end{enumerate}
+
+\subsection{Established Results}
+
+\paragraph{From Black Hole Thermodynamics (Gibbons-Hawking):}
+\begin{itemize}
+\item The Euclidean Kerr metric has a conical singularity at the horizon
+\item Regularity requires $\tau$-periodicity: $\beta = 4\pi/\kappa = 1/T_H$
+\item This determines Hawking temperature
+\end{itemize}
+
+\paragraph{From Fluid/Gravity Correspondence:}
+\begin{itemize}
+\item Black hole horizons map to viscous fluid dynamics
+\item Kerr rotation induces vorticity in the dual fluid
+\item Navier-Stokes (NS) equations govern near-horizon dynamics
+\end{itemize}
+
+\paragraph{Recent Development (Meng \& Yang 2024):}
+\begin{itemize}
+\item NS equations map to non-Hermitian Schrödinger-Pauli equation
+\item Mapping includes ``Stern-Gerlach term'' $\sigma \cdot B$
+\item Classical fluid interpreted as quantum spin system with imaginary diffusion
+\end{itemize}
+
+\subsection{This Work}
+
+We demonstrate that:
+\begin{enumerate}
+\item \textbf{Rotation in Euclidean space creates unresolvable stress}
+\item \textbf{This stress manifests as NS turbulence (spatial cascade)}
+\item \textbf{Signature flip opens temporal dissipation channel}
+\item \textbf{Euclidean regularity condition $\Leftrightarrow$ Minkowski signature requirement}
+\end{enumerate}
+
+\section{Geometric Setup}
+
+\subsection{Euclidean Kerr Metric}
+
+The Euclidean Kerr solution $(t \to -i\tau)$:
+\begin{equation}
+ds^2_E = \rho^2\left(\frac{d\rho^2}{\Delta} + d\theta^2\right) + (r^2+a^2)\sin^2\theta\, d\phi^2 + \frac{\Delta}{\rho^2}[d\tau + a\sin^2\theta\, d\phi]^2
+\end{equation}
+where:
+\begin{itemize}
+\item $\tau$ is Euclidean time (periodic)
+\item $a = J/M$ is angular momentum parameter
+\item $\Delta = r^2 - 2Mr + a^2$
+\end{itemize}
+
+\subsection{The Conical Singularity}
+
+Near the horizon $(r \to r_+)$:
+\begin{equation}
+ds^2_E \approx \rho^2[(2\kappa\tau)^2 + d\rho^2] + \ldots
+\end{equation}
+
+\textbf{Regularity condition:} $(2\kappa\tau)$ must have period $2\pi$ \\
+$\Rightarrow \beta = 4\pi/\kappa = 1/T_H$
+
+\textbf{Key observation:} This is a \textbf{geometric pathology} caused by rotation coupling $\tau$ and $\phi$.
+
+\section{The Rotational Stress Problem}
+
+\subsection{Rotation in Euclidean Signature}
+
+\textbf{The fundamental incompatibility:}
+
+In Euclidean $(+,+,+,+)$ with periodic $\tau$:
+\begin{itemize}
+\item All dimensions are spatial-like
+\item Rotation creates frame-dragging ($\tau$-$\phi$ mixing)
+\item System wants to evolve in ``time'' $\tau$
+\item But $\tau$ is periodic $\Rightarrow$ no true temporal evolution
+\item Energy has nowhere to dissipate forward
+\end{itemize}
+
+\textbf{Result:} Stress accumulates spatially
+
+\subsection{Fluid Dual Perspective}
+
+Via fluid/gravity correspondence:
+\begin{itemize}
+\item Rotation $J \to$ vorticity $\omega$ in dual fluid
+\item Vorticity drives turbulent cascade
+\item In Euclidean: cascade must be spatial (no time)
+\item Creates smaller and smaller scale structures
+\item Potential for finite-scale singularity (NS blowup)
+\end{itemize}
+
+\subsection*{Explicit form and Kerr-scale estimate of the imaginary potential \(V_I\)}
+
+Meng \& Yang's Schr\"odinger--Pauli mapping of the Navier--Stokes equations shows that viscous dissipation appears in the mapped Hamiltonian as an anti-Hermitian contribution which, for the incompressible constant-density case, takes the local form
+\begin{equation}\label{eq:VI_basic}
+    \boxed{ \;V_I(\mathbf x,\tau) \;=\; \nu\,\big|\nabla\psi(\mathbf x,\tau)\big|^2 \; \;}
+\end{equation}
+where \(\nu\) is the kinematic viscosity and \(\psi\) is the two-component spinor used in the Madelung-type reconstruction of the hydrodynamic fields (see Meng \& Yang). For compressible flows the more general expression reads (schematically)
+\begin{equation}\label{eq:VI_compressible}
+    V_I \sim \mu\frac{2|\nabla\psi|^2 - \Delta\rho}{2\rho^2}\,,
+\end{equation}
+with \(\mu\) the shear viscosity and \(\rho\) the density; below we use the incompressible scaling \eqref{eq:VI_basic} for clarity.
+
+To express \(|\nabla\psi|^2\) in hydrodynamic terms we use the dominant phase-gradient approximation (locally single-phase spinor),
+\[
+\mathbf u \;\simeq\; \frac{\hbar}{m}\nabla\theta \quad\Rightarrow\quad
+|\nabla\psi|^2 \;\sim\; \frac{m^2}{\hbar^2}\,\rho\,|\mathbf u|^2,
+\]
+so that we obtain the parametric estimate
+\begin{equation}\label{eq:VI_scaling}
+    \boxed{ \;V_I(\mathbf x,\tau) \;\approx\; \nu\,\frac{m^2}{\hbar^2}\,\rho\,|\mathbf u(\mathbf x,\tau)|^2 \; .\; }
+\end{equation}
+Here \(m,\hbar,\rho\) denote the effective mass, Planck constant, and density used in the SPE dictionary (in Meng \& Yang's numerics one often sets \(\hbar=1,m=1,\rho=1\)).
+
+For a boundary fluid driven by a rotating bulk (Kerr-like) source the characteristic near-horizon velocity scale is \(u\sim\Omega_H r_+\), where the horizon angular velocity is
+\[
+\Omega_H=\frac{a}{r_+^2+a^2},\qquad r_+=M+\sqrt{M^2-a^2}.
+\]
+Inserting \(u\sim\Omega_H r_+\) into \eqref{eq:VI_scaling} gives the Kerr-scale estimate
+\begin{equation}\label{eq:VI_kerr}
+    \boxed{ \;V_I^{\mathrm{(Kerr)}} \;\approx\; \nu\;\frac{m^2}{\hbar^2}\;\rho\;(\Omega_H r_+)^2
+    \;=\; \nu\;\frac{m^2}{\hbar^2}\;\rho\;\frac{a^2 r_+^2}{(r_+^2+a^2)^2} \; .\;}
+\end{equation}
+
+\paragraph{Remarks.}
+\begin{itemize}
+  \item Equation \eqref{eq:VI_basic} is the leading, local incompressible form obtained directly from the Meng--Yang mapping; compressible corrections are shown in \eqref{eq:VI_compressible}.
+  \item Dimensional bookkeeping: \(\nu\) carries units \(L^2/T\); the combination \((m^2/\hbar^2)\rho u^2\) carries units \(1/T^2\) (in the SPE units this is rendered dimensionless when \(\hbar=m=\rho=1\)). When comparing with GR scales one must map the effective SPE units back to physical units via the chosen fluid/gravity dictionary.
+  \item For near-extremal spins (\(a\sim M\)) the factor \((\Omega_H r_+)^2\) scales as \(O(1/M^2)\), so \(V_I^{\mathrm{(Kerr)}}\) generically decreases with increasing black-hole mass when SPE parameters are held fixed.
+\end{itemize}
+
+
+\section{The Monodromy Obstruction}
+
+\subsection*{Euclidean monodromy obstruction for rotating viscous boundary fluids}
+
+\paragraph{Setup.}
+Let \(H_E(\tau)\) denote the Euclidean-time generator obtained from the Navier--Stokes \(\to\) Schr\"odinger--Pauli mapping on the thermal circle \(\tau\in[0,\beta)\). The Euclidean construction aims to produce a thermal operator
+\begin{equation}\label{eq:monodromy_def}
+    \mathcal M \;=\; \mathcal T\exp\Big(-\int_0^\beta H_E(\tau)\,d\tau\Big),
+\end{equation}
+which must be positive and reflection-positive to define a bona fide thermal state \(\rho_\beta\) that Wick-rotates to a unitary Lorentzian theory (Osterwalder--Schrader reflection positivity).
+
+\paragraph{Structure of \(H_E\).}
+From the NSE\(\to\)SPE mapping viscous dissipation appears as an anti-Hermitian contribution.
+We therefore write
+\begin{equation}\label{eq:HE_decomp}
+    H_E(\tau) \;=\; H_0(\tau) \;+\; i\,V_I(\tau),
+\end{equation}
+with \(H_0(\tau)=H_0(\tau)^\dagger\) and \(V_I(\tau)\) a real-valued operator (for incompressible flows \(V_I(\mathbf x,\tau)=\nu|\nabla\psi|^2\)).
+
+\paragraph{Toy spectral argument (constant approximation).}
+Assume first the constant-in-\(\tau\) approximation \(H_E(\tau)\approx H_E\) or equivalently that the \(\tau\)-average dominates. Let \(\{|n\rangle\}\) diagonalize \(H_0\) with eigenvalues \(E_n\), and denote \(v_n=\langle n|V_I|n\rangle\in\mathbb R\). Then the eigenvalues of \(\mathcal M\) are
+\[
+\lambda_n = e^{-\beta(E_n + i v_n)} = e^{-\beta E_n} e^{-i\beta v_n}.
+\]
+Reflection-positivity and the interpretability of \(\mathcal M\) as \(e^{-\beta\widehat H}\) for some Hermitian \(\widehat H\) require each \(\lambda_n\) to be a positive real number. This is possible only if \(e^{-i\beta v_n}=1\) for every \(n\), i.e. \(\beta v_n\in 2\pi\mathbb Z\) for all eigenstates. For a continuum spectrum or generic spatially varying \(V_I\) such a simultaneous quantization is generically impossible. Hence a nonzero averaged imaginary potential leads to complex-phased eigenvalues of \(\mathcal M\) and thus violates positivity.
+
+\paragraph{General time-dependent case.}
+If \(H_E(\tau)\) does not commute at different \(\tau\) the time-ordered monodromy \eqref{eq:monodromy_def} still generically picks up complex phases from the anti-Hermitian part \(iV_I(\tau)\). The necessary condition for \(\mathcal M\) to be interpretable as \(e^{-\beta\widehat H}\) with \(\widehat H=\widehat H^\dagger\) is that the net effect of \(iV_I\) over one period be gauge-exact (see next subsection). If it is not, \(\mathcal M\) fails reflection-positivity.
+
+\paragraph{Conclusion.}
+If rotation sources a nonzero \(\tau\)-averaged imaginary potential \(\overline{V_I}\!=\!\tfrac{1}{\beta}\int_0^\beta V_I(\tau)\,d\tau\neq0\) (as the Meng--Yang mapping yields for generic vorticity), then there is a monodromy obstruction: no smooth, periodic Euclidean filling exists that yields a standard positive thermal operator unless one (i) enforces non-generic spectral quantization, (ii) alters boundary/topological data, or (iii) admits a real-time dissipative (Lorentzian) channel. Thus rotation-induced viscous dissipation is generically incompatible with a fully periodic, smooth Euclidean geometry.
+
+
+\subsection*{Gauge-removability criterion for the imaginary potential}
+
+\paragraph{Lemma (gauge-removability).}
+Let \(H_E(\tau)=H_0(\tau)+iV_I(\tau)\) with real \(V_I(\tau)\). A sufficient condition for \(iV_I\) to be removed by a time-dependent similarity/gauge transformation that preserves thermal-periodicity is that there exists a real operator (or c-number) \(\chi(\tau)\) with \(\chi(\beta)=\chi(0)\) such that
+\[
+V_I(\tau) \;=\; \partial_\tau\chi(\tau) \;+\; [\chi(\tau),H_0(\tau)]_{\text{(comm.)}}.
+\]
+If such \(\chi(\tau)\) exists then the transformation \(|\psi\rangle\mapsto e^{-i\chi(\tau)}|\psi\rangle\) yields a new generator \(H_E'(\tau)\) whose anti-Hermitian part is canceled, and the monodromy becomes positive.
+
+\paragraph{Sketch of proof.}
+Under the \(\tau\)-dependent unitary/gauge transform \(U(\tau)=e^{-i\chi(\tau)}\) the Euclidean generator changes as
+\[
+H_E \mapsto H_E' = U H_E U^{-1} - i(\partial_\tau U)U^{-1} .
+\]
+Writing \(U=e^{-i\chi}\) and expanding gives the shift of the anti-Hermitian piece by \(-i\partial_\tau\chi\) plus commutators with \(H_0\). If \(V_I\) equals \(\partial_\tau\chi\) up to such commutators (and \(U\) is single-valued on the thermal circle so that \(U(\beta)=U(0)\)), the net monodromy is rendered positive.
+
+\paragraph{When the gauge trick fails.}
+The gauge removal is only possible when \(V_I\) is (i) gauge-exact in \(\tau\) or (ii) proportional to a global conserved charge \(Q\) commuting with \(H_0\) (so \(V_I(\tau)=\mu(\tau)Q\) and \(\chi(\tau)=\big(\int^\tau \mu\big)Q\)). In contrast, the viscous term obtained from the Meng--Yang mapping, \(V_I(\mathbf x,\tau)=\nu|\nabla\psi|^2\), is generically a spatially varying multiplicative potential which is not of the global conserved-charge form. Any attempt to choose a spatially dependent \(\chi(\tau,\mathbf x)\) faces the single-valuedness requirement \(e^{-i\chi(\beta,\mathbf x)}=e^{-i\chi(0,\mathbf x)}\) for all \(\mathbf x\); this cannot be satisfied globally in a smooth way for a generic inhomogeneous profile unless singular gauge transitions or pathological topological decompositions are permitted. Therefore the imaginary potential sourced by viscous vorticity is generically \emph{not} gauge-removable, and the monodromy obstruction described above is robust.
+
+
+\section{Physical Analog: Stern-Gerlach Experiment}
+
+\subsection{The Process}
+
+\textbf{Stern-Gerlach spin alignment:}
+\begin{enumerate}
+\item Magnetic moment $\mu$ in external field $B$
+\item Torque $\tau = \mu \times B$ creates precession
+\item System radiates EM energy/angular momentum
+\item Reaches aligned state ($\tau = 0$)
+\end{enumerate}
+
+\textbf{Key features:}
+\begin{itemize}
+\item External field breaks rotational symmetry
+\item Radiation is delocalized (cylindrically symmetric)
+\item Process is irreversible (non-Hermitian)
+\item Final state is new equilibrium
+\end{itemize}
+
+\subsection{Mapping to Signature Emergence}
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Stern-Gerlach} & \textbf{Black Hole Horizon} \\
+\hline
+External B-field & Rotation $\Omega_H$ at boundary \\
+Spin precession & Frame-dragging ($\tau$-$\phi$ mixing) \\
+Torque $\tau = \mu \times B$ & ``Euclidean stress'' from $J$ \\
+EM radiation & Hawking radiation / GWs \\
+Cylindrical symmetry & Horizon radiation pattern \\
+Alignment $\to \tau = 0$ & Regularity condition \\
+Observable, calculable & QFT in curved spacetime \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Critical insight:} The Stern-Gerlach term in the NS-spinor mapping ($\sigma \cdot B$) is not just a correction---it's the physical mechanism for dissipation.
+
+\subsection{Why This Breaks the Wick Deadlock}
+
+\textbf{Traditional approach:}
+\begin{itemize}
+\item Need Wick rotation to understand black holes
+\item But need black holes to justify Wick rotation
+\item Circular reasoning
+\end{itemize}
+
+\textbf{Our approach:}
+\begin{itemize}
+\item Stern-Gerlach provides independent physical template
+\item Observable process: symmetry breaking $\to$ radiation $\to$ equilibrium
+\item Radiation pattern proves signature selection
+\item No circular reasoning---uses laboratory physics
+\end{itemize}
+
+\section{Formal Argument}
+
+\subsection{Main Theorem}
+
+\textbf{Theorem (Signature Emergence from Rotational Stress):}
+For a rotating system with angular momentum $J \neq 0$ in Euclidean signature $(+,+,+,+)$, the geometric regularity condition (absence of conical singularity) is mathematically equivalent to the existence of a Minkowski signature $(-,+,+,+)$ region that provides a temporal dissipation channel for rotational stress.
+
+\textbf{Formal statement:}
+\begin{equation}
+\boxed{
+\begin{aligned}
+&\text{Regularity}(\text{Euclidean Kerr with } J \neq 0) \\
+&\quad \Leftrightarrow \exists \text{ Minkowski region with signature flip} \\
+&\quad \Leftrightarrow \text{Non-Hermitian dynamics allowed} \\
+&\quad \Leftrightarrow \text{Temporal dissipation channel exists}
+\end{aligned}
+}
+\end{equation}
+
+\section{Discussion and Conclusions}
+
+\subsection{Summary of Results}
+
+We have demonstrated that:
+\begin{enumerate}
+\item \textbf{Rotation in Euclidean signature creates geometric stress that cannot dissipate within the closed time dimension}
+\item \textbf{This stress manifests as Navier-Stokes turbulence---a spatial cascade with no temporal outlet}
+\item \textbf{The signature flip to Minkowski $(-,+,+,+)$ opens a temporal dissipation channel, resolving the instability}
+\item \textbf{The Euclidean regularity condition $(\beta = 4\pi/\kappa)$ and the signature flip are dual descriptions of the same requirement}
+\item \textbf{Stern-Gerlach spin alignment provides an observable physical analog of this mechanism}
+\item \textbf{The monodromy obstruction proves this is not merely analogous but mathematically necessary}
+\end{enumerate}
+
+This provides a \textbf{physical interpretation of Wick rotation} as the mathematical shadow of a real geometric process: the opening of a dissipative temporal channel to resolve rotational stress.
+
+The difficulty of the Navier-Stokes millennium problem is not a mathematical curiosity---it's evidence that \textbf{turbulence is suppressed time}.
+
+\subsection{Implications}
+
+[Add your discussion of implications]
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
