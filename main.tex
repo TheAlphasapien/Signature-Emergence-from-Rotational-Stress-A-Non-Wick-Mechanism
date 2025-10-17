@@ -357,9 +357,408 @@ This observation naturally leads to a broader question: if Minkowski signature e
 
 \appendix
 \section{Technical Details}
-\input{appendix_a1_kerr_expansion}
-\input{appendix_a2_vorticity_calculation}
-\input{appendix_a3_ns_spinor_mapping}
+\subsection{Euclidean Kerr Near-Horizon Expansion}
+
+\subsubsection{The Kerr Metric in Boyer-Lindquist Coordinates}
+
+The Kerr metric in standard Boyer-Lindquist coordinates is:
+\begin{equation}
+ds^2 = -\frac{\Delta}{\Sigma}(dt - a\sin^2\theta\, d\phi)^2 + \frac{\Sigma}{\Delta}dr^2 + \Sigma d\theta^2 + \frac{\sin^2\theta}{\Sigma}[(r^2+a^2)d\phi - a\,dt]^2
+\end{equation}
+where:
+\begin{align}
+\Delta &= r^2 - 2Mr + a^2 \\
+\Sigma &= r^2 + a^2\cos^2\theta \\
+a &= J/M
+\end{align}
+
+The outer horizon is located at:
+\begin{equation}
+r_+ = M + \sqrt{M^2 - a^2}
+\end{equation}
+
+\subsubsection{Wick Rotation to Euclidean Signature}
+
+Apply the Wick rotation $t \to -i\tau$ where $\tau$ is real Euclidean time. The metric becomes:
+\begin{equation}
+ds^2_E = \frac{\Delta}{\Sigma}(d\tau + a\sin^2\theta\, d\phi)^2 + \frac{\Sigma}{\Delta}dr^2 + \Sigma d\theta^2 + \frac{\sin^2\theta}{\Sigma}[(r^2+a^2)d\phi + ia\,d\tau]^2
+\end{equation}
+
+After algebraic simplification, this can be written as:
+\begin{equation}
+ds^2_E = \frac{\Sigma}{\Delta}dr^2 + \Sigma d\theta^2 + (r^2+a^2)\sin^2\theta\, d\phi^2 + \frac{\Delta}{\Sigma}[d\tau + a\sin^2\theta\, d\phi]^2
+\end{equation}
+
+\subsubsection{Near-Horizon Expansion}
+
+Define the near-horizon coordinate:
+\begin{equation}
+\rho = r - r_+
+\end{equation}
+
+Expand $\Delta$ near the horizon:
+\begin{align}
+\Delta &= r^2 - 2Mr + a^2 \\
+&= (r - r_+)(r - r_-) \\
+&\approx (r_+ - r_-)\rho + O(\rho^2)
+\end{align}
+
+Define the surface gravity:
+\begin{equation}
+\kappa = \frac{r_+ - r_-}{2(r_+^2 + a^2)} = \frac{\sqrt{M^2-a^2}}{2M^2 - a^2 + 2M\sqrt{M^2-a^2}}
+\end{equation}
+
+Then:
+\begin{equation}
+\Delta \approx 2\kappa(r_+^2 + a^2)\rho
+\end{equation}
+
+\subsubsection{The Conical Singularity}
+
+Near the horizon at the equatorial plane ($\theta = \pi/2$), the metric becomes approximately:
+\begin{equation}
+ds^2_E \approx \frac{r_+^2 + a^2}{2\kappa\rho}d\rho^2 + \frac{2\kappa\rho}{r_+^2 + a^2}[d\tau + a\,d\phi]^2 + (r_+^2+a^2)d\phi^2
+\end{equation}
+
+Introducing the coordinate $r'^2 = \frac{r_+^2 + a^2}{\kappa}\rho$ near $\rho = 0$:
+\begin{equation}
+ds^2_E \approx dr'^2 + (2\kappa r')^2 \left[\frac{d\tau + a\,d\phi}{2\sqrt{(r_+^2+a^2)\kappa}}\right]^2 + \ldots
+\end{equation}
+
+This has the form:
+\begin{equation}
+ds^2 \approx dr'^2 + r'^2 d\chi^2
+\end{equation}
+where:
+\begin{equation}
+\chi = 2\kappa\left[\frac{\tau + a\phi}{2\sqrt{(r_+^2+a^2)\kappa}}\right]
+\end{equation}
+
+\subsubsection{Regularity Condition}
+
+For the geometry to be smooth at $r' = 0$ (the horizon), the angular coordinate $\chi$ must have period $2\pi$. This requires:
+\begin{equation}
+\tau \sim \tau + \beta
+\end{equation}
+where:
+\begin{equation}
+\boxed{\beta = \frac{4\pi}{\kappa} = \frac{1}{T_H}}
+\end{equation}
+
+This is the Hawking temperature relation. Without this periodicity condition, the geometry has a conical singularity at the horizon—a coordinate singularity that signals geometric pathology.
+
+\subsubsection{The Horizon Angular Velocity}
+
+The horizon angular velocity is:
+\begin{equation}
+\Omega_H = \frac{a}{r_+^2 + a^2}
+\end{equation}
+
+This creates frame-dragging in the $(\tau, \phi)$ plane, which sources vorticity in the dual fluid description.
+
+\subsubsection{Key Observation}
+
+The term $d\tau + a\sin^2\theta\, d\phi$ in the Euclidean metric shows explicit mixing between the (periodic) Euclidean time $\tau$ and the azimuthal angle $\phi$. This mixing is the geometric origin of:
+\begin{enumerate}
+\item The frame-dragging effect
+\item The vorticity in the fluid dual
+\item The rotational stress that cannot dissipate in closed periodic time
+\end{enumerate}
+
+The regularity condition $\beta = 4\pi/\kappa$ removes the conical defect geometrically but, as we demonstrate in the main text, this is equivalent to admitting the need for a Minkowski dissipative channel.
+
+\subsection{Vorticity Calculation in Fluid Dual}
+
+\subsubsection{Fluid/Gravity Correspondence}
+
+The fluid/gravity correspondence relates dynamics at a black hole horizon to viscous fluid flow on a stretched horizon membrane. For a Kerr black hole, the key dictionary elements are:
+
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Gravity (Bulk)} & \textbf{Fluid (Boundary)} \\
+\hline
+Horizon location $r_+$ & Membrane position \\
+Frame-dragging $g_{t\phi}$ & Fluid velocity field $\mathbf{u}$ \\
+Surface gravity $\kappa$ & Temperature $T_H = \kappa/(2\pi)$ \\
+Horizon area $A_H$ & Entropy $S = A_H/4$ \\
+Angular momentum $J$ & Vorticity $\omega$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{Frame-Dragging and Velocity Field}
+
+The Kerr metric frame-dragging term in the $(\tau, \phi)$ sector is:
+\begin{equation}
+g_{\tau\phi} = -\frac{a r \sin^2\theta}{\Sigma}
+\end{equation}
+
+Near the horizon ($r \to r_+$), at the equatorial plane ($\theta = \pi/2$):
+\begin{equation}
+g_{\tau\phi}(r_+) = -\frac{a r_+}{r_+^2 + a^2}
+\end{equation}
+
+\begin{remark}
+Equation~\eqref{eq:VI} represents an effective energy-density interpretation of the 
+operator form $i\nu\nabla^2$ appearing in the original Meng-Yang mapping. This mean-field 
+approximation is justified in the hydrodynamic limit where $|\nabla\psi|^2 \propto \rho u^2$ 
+captures the local kinetic energy density of the fluid.
+\end{remark}
+
+The frame-dragging velocity in the fluid dual is:
+\begin{equation}
+u_\phi = \Omega_H r_+ = \frac{a r_+}{r_+^2 + a^2}
+\end{equation}
+
+where $\Omega_H$ is the horizon angular velocity.
+
+\subsubsection{Vorticity from Rotation}
+
+Vorticity is defined as:
+\begin{equation}
+\omega = \nabla \times \mathbf{u}
+\end{equation}
+
+For an axisymmetric flow in cylindrical-like coordinates $(r, \theta, \phi)$, with velocity $\mathbf{u} = u_\phi(r,\theta)\hat{\phi}$:
+\begin{equation}
+\omega_r = \frac{1}{r\sin\theta}\frac{\partial(u_\phi \sin\theta)}{\partial\theta}
+\end{equation}
+\begin{equation}
+\omega_\theta = -\frac{1}{r}\frac{\partial(r u_\phi)}{\partial r}
+\end{equation}
+
+\subsubsection{Explicit Calculation Near Horizon}
+
+Taking $u_\phi = \Omega_H r$ near the horizon with $\Omega_H$ approximately constant:
+\begin{equation}
+\omega_\theta = -\frac{1}{r}\frac{\partial(r \cdot \Omega_H r)}{\partial r} = -\frac{1}{r}\frac{\partial(\Omega_H r^2)}{\partial r} = -2\Omega_H
+\end{equation}
+
+The magnitude of vorticity scales as:
+\begin{equation}
+|\omega| \sim \Omega_H \sim \frac{a}{r_+^2 + a^2}
+\end{equation}
+
+For near-extremal Kerr ($a \to M$):
+\begin{equation}
+|\omega| \sim \frac{1}{M}
+\end{equation}
+
+\subsubsection{Vorticity in the Euclidean Formulation}
+
+After Wick rotation, the fluid lives on the Euclidean manifold with periodic $\tau$. The vorticity remains:
+\begin{equation}
+\omega \sim \Omega_H
+\end{equation}
+
+but now the time coordinate $\tau$ is compact. The vorticity wants to evolve:
+\begin{equation}
+\frac{\partial \omega}{\partial \tau} \neq 0
+\end{equation}
+
+However, periodicity $\tau \sim \tau + \beta$ means there can be no net evolution over one cycle. This creates the fundamental incompatibility.
+
+\subsubsection{Connection to Navier-Stokes}
+
+In the NS-spinor mapping, vorticity $\omega$ appears as the effective magnetic field in the Stern-Gerlach term:
+\begin{equation}
+\mathbf{B}_{\text{eff}} = \omega \sim \Omega_H \hat{\theta}
+\end{equation}
+
+This creates a torque on circulation elements (spinors):
+\begin{equation}
+\tau = \mu \times \mathbf{B}_{\text{eff}}
+\end{equation}
+
+The torque drives energy into smaller scales (turbulent cascade) since there is no temporal direction for dissipation in periodic Euclidean time.
+
+\subsubsection{Scaling Relations}
+
+Key dimensional scalings:
+\begin{align}
+\text{Vorticity:} \quad &\omega \sim \frac{J}{M^3} \\
+\text{Velocity:} \quad &u \sim \Omega_H r_+ \sim \frac{J}{M^2} \\
+\text{Timescale:} \quad &\tau_{\text{vortex}} \sim \frac{1}{\omega} \sim \frac{M^3}{J}
+\end{align}
+
+For extremal Kerr ($J \to M^2$):
+\begin{equation}
+\omega \sim \frac{1}{M}, \quad \tau_{\text{vortex}} \sim M
+\end{equation}
+
+\subsubsection{Physical Interpretation}
+
+The vorticity calculation demonstrates:
+\begin{enumerate}
+\item Frame-dragging in GR $\Rightarrow$ vorticity in fluid dual
+\item Vorticity magnitude $\sim \Omega_H$ (horizon angular velocity)
+\item Vorticity creates effective "magnetic field" in NS-spinor mapping
+\item Periodic Euclidean time provides no dissipation channel for vortex evolution
+\item This forces the signature flip to open temporal dimension
+\end{enumerate}
+
+The vorticity is not an artifact of the mapping—it's the fluid-dual representation of the geometric frame-dragging that creates the rotational stress requiring resolution via signature emergence.
+
+\subsection{Non-Hermitian Schrödinger-Pauli Mapping}
+
+\subsubsection{Background}
+
+Meng \& Yang (2024) demonstrated that the incompressible Navier-Stokes equations can be mapped to a non-Hermitian Schrödinger-Pauli equation for a quantum spin system. This mapping provides the mathematical framework for understanding NS turbulence as suppressed quantum dynamics with an essential dissipative component.
+
+\subsubsection{The Navier-Stokes Equations}
+
+For an incompressible fluid:
+\begin{align}
+\partial_t \mathbf{u} + (\mathbf{u} \cdot \nabla)\mathbf{u} &= -\nabla p/\rho + \nu \nabla^2 \mathbf{u} \\
+\nabla \cdot \mathbf{u} &= 0
+\end{align}
+where $\mathbf{u}$ is velocity field, $p$ is pressure, $\rho$ is density, and $\nu$ is kinematic viscosity.
+
+\subsubsection{The Madelung Transformation}
+
+Define a complex wave function from the velocity field:
+\begin{equation}
+\psi(\mathbf{x},t) = \sqrt{\rho} \exp(iS/\hbar_{\text{eff}})
+\end{equation}
+where $S$ is the velocity potential ($\mathbf{u} = \nabla S$) and $\hbar_{\text{eff}}$ is an effective Planck constant.
+
+The probability density and current are:
+\begin{align}
+\rho &= |\psi|^2 \\
+\mathbf{j} &= \frac{\hbar_{\text{eff}}}{m^*} \text{Im}(\psi^* \nabla \psi)
+\end{align}
+
+Starting from the spinor-velocity relation in the Madelung representation:
+\begin{equation}
+\mathbf{u} \simeq \frac{\hbar_{\text{eff}}}{m^*}\nabla\theta \implies |\nabla\psi|^2 \sim \frac{m^{*2}}{\hbar_{\text{eff}}^2}\rho|\mathbf{u}|^2
+\end{equation}
+where $\hbar_{\text{eff}} = \nu$ and $m^* = \rho$ in the Meng-Yang dictionary.
+
+For the Kerr horizon with $u \sim \Omega_H r_+$:
+\begin{equation}
+V_I^{(\text{Kerr})} = \nu\frac{m^{*2}}{\hbar_{\text{eff}}^2}\rho(\Omega_H r_+)^2 = \nu\rho\frac{a^2 r_+^2}{(r_+^2 + a^2)^2}
+\end{equation}
+This scaling confirms $\overline{V_I} \neq 0$ for all $J \neq 0$.
+
+\subsubsection{The Resulting Schrödinger-Pauli Equation}
+
+The NS equations transform to:
+\begin{equation}
+i\hbar_{\text{eff}} \partial_t \psi = \hat{H}\psi
+\end{equation}
+where the Hamiltonian is:
+\begin{equation}
+\hat{H} = -\frac{\hbar^2_{\text{eff}}}{2m^*} \nabla^2 + V_R(\mathbf{x}) + iV_I(\mathbf{x}) + \frac{\hbar_{\text{eff}}}{2}\sigma \cdot \mathbf{B}(\mathbf{x})
+\end{equation}
+
+\textbf{The parameters:}
+\begin{itemize}
+\item $\hbar_{\text{eff}} = \nu$ (kinematic viscosity serves as effective Planck constant)
+\item $m^* = \rho$ (fluid density as effective mass)
+\item $V_R(\mathbf{x})$ = real potential from pressure gradients
+\item $V_I(\mathbf{x})$ = imaginary potential representing dissipation
+\item $\sigma \cdot \mathbf{B}(\mathbf{x})$ = Stern-Gerlach term from vorticity
+\end{itemize}
+
+\subsubsection{Key Distinction - Hermiticity}
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Flow Type} & \textbf{Viscosity} & $V_I$ & \textbf{Hermiticity} & \textbf{Reversibility} \\
+\hline
+Potential & $\nu = 0$ & 0 & Hermitian & Reversible \\
+Euler & $\nu = 0$ & 0 & Hermitian & Reversible \\
+\textbf{Navier-Stokes} & $\nu \neq 0$ & $\neq 0$ & \textbf{Non-Hermitian} & \textbf{Irreversible} \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsubsection{The Stern-Gerlach Term Explicitly}
+
+The effective magnetic field is the vorticity:
+\begin{equation}
+\mathbf{B}(\mathbf{x}) = \nabla \times \mathbf{u} = \omega
+\end{equation}
+
+The interaction term:
+\begin{equation}
+\hat{H}_{SG} = \frac{\hbar_{\text{eff}}}{2}\sigma \cdot \mathbf{B} = \frac{\hbar_{\text{eff}}}{2}(\sigma_x \omega_x + \sigma_y \omega_y + \sigma_z \omega_z)
+\end{equation}
+where $\sigma_i$ are the Pauli spin matrices:
+\begin{equation}
+\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \quad
+\sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \quad
+\sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}
+\end{equation}
+
+\subsubsection{Physical Interpretation}
+
+The Stern-Gerlach term creates a torque on the ``spin'' (local circulation element) analogous to a magnetic moment in an external field:
+\begin{equation}
+\tau = \mu \times \mathbf{B}_{\text{eff}}
+\end{equation}
+
+This torque drives precession and energy dissipation through radiation.
+
+\subsubsection{Application to Euclidean Kerr Horizon}
+
+For a rotating black hole with angular momentum $J$:
+
+\begin{enumerate}
+\item \textbf{Frame-dragging creates vorticity:}
+\begin{equation}
+\omega \sim g_{t\phi,r} \sim J/r^3 \text{ (near horizon)}
+\end{equation}
+
+\item \textbf{This appears as effective field:}
+\begin{equation}
+\mathbf{B}_{\text{eff}} = \omega \sim \Omega_H \text{ (at horizon)}
+\end{equation}
+
+\item \textbf{Creates Stern-Gerlach torque:}
+\begin{equation}
+\hat{H}_{SG} \sim \hbar_{\text{eff}} \Omega_H \sigma \cdot \hat{\phi}
+\end{equation}
+
+\item \textbf{Requires dissipation:}
+The torque cannot be eliminated in closed Euclidean time $\tau$ without energy dissipation, which requires $V_I \neq 0$.
+\end{enumerate}
+
+\subsubsection{The Contradiction with Euclidean Signature}
+
+In Euclidean $(+,+,+,+)$ with periodic $\tau$:
+\begin{itemize}
+\item Time dimension is compact: $\tau \in [0, \beta]$
+\item System must be Hermitian (no coupling to external bath)
+\item Hermitian $\Rightarrow V_I = 0$ (no dissipation)
+\item But NS flow with rotation requires $V_I \neq 0$
+\end{itemize}
+
+\subsubsection{Resolution}
+
+The signature must flip to Minkowski $(-,+,+,+)$ to:
+\begin{enumerate}
+\item Open the time dimension ($\tau \to t$, non-periodic)
+\item Allow non-Hermitian dynamics ($V_I \neq 0$)
+\item Enable temporal dissipation channel
+\item Permit radiation to carry away angular momentum
+\end{enumerate}
+
+\subsubsection{Mathematical Statement}
+
+The non-Hermiticity of the NS-spinor mapping is the \textbf{mathematical signature} of the physical necessity for temporal opening. The imaginary potential $V_I$ represents the coupling to the temporal dissipation channel that must exist when $J \neq 0$.
+
+This provides the formal connection between:
+\begin{itemize}
+\item Geometric regularity (absence of conical singularity)
+\item Non-Hermitian dynamics ($V_I \neq 0$)
+\item Signature flip (opening time dimension)
+\item Physical dissipation (radiation)
+\end{itemize}
+
+All four are different descriptions of the same requirement.
 
 \subsection{Energy Budget Calculation}\label{app:energy-budget}
 
