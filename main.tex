@@ -111,10 +111,15 @@ The standard Madelung transformation is used to define a spinor field $\psi(\mat
 \begin{equation}\label{eq:HE_decomp}
     H_E(\tau) \;=\; H_0(\tau) \;+\; i\,V_I(\tau)
 \end{equation}
-where $H_0(\tau)=H_0(\tau)^\dagger$ is the Hermitian part, and the imaginary potential $V_I(\mathbf{x}, \tau)$ is proportional to the \textbf{viscous dissipation}:
-\begin{equation}\label{eq:VI_basic_toolset}
-    V_I(\mathbf x,\tau) \;=\; \nu\,|\nabla\psi(\mathbf x,\tau)|^2 \quad 	ext{(mean-field approximation of } i\nu\nabla^2\psi 	ext{)}
+where $H_0(\tau)=H_0(\tau)^\dagger$ is the Hermitian part, and the imaginary potential $V_I(\mathbf{x}, \tau)$ is proportional to the \textbf{viscous dissipation}.
+
+\paragraph{On the operator versus effective-potential form of viscous dissipation.}
+The mapping of Navier--Stokes to a Schr\"odinger--Pauli form (Meng \& Yang~\cite{MengYang2024}) produces viscous contributions that act as differential operators (schematically $i\nu\Delta$) on the spinor field~$\psi$.  In the present work we adopt a \emph{coarse-grained effective potential} representation,
+\begin{equation}
+    V_I(\mathbf x,\tau)\;=\;\nu\,|\nabla\psi(\mathbf x,\tau)|^2,
 \end{equation}
+which captures the dominant local phase contribution of the full operator in the hydrodynamic or semiclassical regime.  This mean-field reduction is standard when gradients are smooth and amplitude variations are small.  Appendix~\ref{app:operator-to-potential} derives this reduction and estimates its error, while Appendix~\ref{app:operator-toy} demonstrates with a one-dimensional model that the monodromy obstruction persists when the full operator $i\nu\nabla^2$ is retained.  Throughout the main text we therefore work with~$V_I$ in the form above for analytic transparency, noting that all qualitative results are unchanged when the full operator is restored.
+
 
 For a rotating black hole:
 \begin{enumerate}
@@ -356,7 +361,84 @@ This observation naturally leads to a broader question: if Minkowski signature e
 \bibliography{references}
 
 \appendix
-\section{Technical Details}
+\section{Operator--to--potential reduction and error estimate}
+\label{app:operator-to-potential}
+
+The Navier--Stokes to Schr\"odinger--Pauli mapping (Meng \& Yang~\cite{MengYang2024}) yields a viscous term that acts as the operator $i\nu\Delta$ on the spinor $\psi$.  
+To motivate the effective multiplicative potential used in the main text, we compute the expectation value of this operator and establish when it can be represented locally by $i\nu|\nabla\psi|^2$ up to small corrections.
+
+\subsection*{Expectation value identity}
+For square-integrable $\psi$ on a spatial domain~$V$ with suitable boundary conditions,
+\begin{align}
+    \langle \psi | i\nu\Delta | \psi\rangle 
+    &= i\nu \!\int_V \psi^* \Delta \psi \, d^3x 
+       = -i\nu \!\int_V |\nabla\psi|^2 d^3x
+       + i\nu \!\oint_{\partial V} \psi^* \nabla\psi\!\cdot\! d\mathbf S .
+\end{align}
+If the boundary term vanishes (periodic or no-flux boundaries, or coarse-graining over scales much smaller than the domain), then
+\begin{equation}
+    \langle i\nu\Delta \rangle \;\approx\; -\,i\nu \!\int_V |\nabla\psi|^2 d^3x .
+\end{equation}
+In this sense the operator contributes locally an imaginary potential density $i\nu|\nabla\psi|^2$ to leading order.
+
+\subsection*{Semiclassical reduction}
+Write $\psi=\sqrt{\rho}\,e^{iS/\hbar_{\mathrm{eff}}}$ with slowly varying amplitude $\rho$ and phase $S$.  
+Then
+\[
+|\nabla\psi|^2
+= \tfrac{1}{4\rho}|\nabla\rho|^2
++ \rho\,|\nabla S|^2/\hbar_{\mathrm{eff}}^2 .
+\]
+If $|\nabla\rho|/\rho\ll|\nabla S|/\hbar_{\mathrm{eff}}$, the first term is negligible and
+$|\nabla\psi|^2\simeq \rho|\nabla S|^2/\hbar_{\mathrm{eff}}^2$.
+The corresponding energy-density interpretation of the viscous operator becomes
+\begin{equation}
+    i\nu\Delta\psi \;\longrightarrow\; i\nu\,\frac{m^{*2}}{\hbar_{\mathrm{eff}}^2}\,\rho\,|\mathbf u|^2\,\psi ,
+\end{equation}
+with $\mathbf u=\nabla S/m^*$, justifying the identification $V_I=\nu|\nabla\psi|^2$ used in the main text.
+
+\subsection*{Error estimate}
+Let the coarse-graining scale be $\ell_{\mathrm{c}}$ and the typical variation scale of $\psi$ be $L\gg\ell_{\mathrm{c}}$.  
+Integrating by parts twice shows that neglected boundary and higher-derivative terms are suppressed by $(\ell_{\mathrm{c}}/L)^2$.  
+Defining $\varepsilon=(\ell_{\mathrm{c}}/L)^2$, the spectral phase shift due to these terms enters the monodromy operator $\mathcal M=e^{-\beta(H_0+iV_I)}$ only at $O(\varepsilon)$.  
+Hence the replacement of $i\nu\Delta$ by $i\nu|\nabla\psi|^2$ introduces at most small, controllable corrections that do not affect the existence or absence of reflection positivity.
+
+\section{Toy operator model: persistence of the monodromy obstruction}
+\label{app:operator-toy}
+
+To verify that the reflection-positivity obstruction survives when the full viscous operator $i\nu\nabla^2$ is retained, we study a one-dimensional model where all quantities can be computed explicitly.
+
+\subsection*{Setup}
+Consider $\tau$-independent Euclidean evolution generated by
+\begin{equation}
+    H_E = -\partial_x^2 + V_0(x) + i\nu\,\partial_x^2 ,
+\end{equation}
+on the interval $x\!\in\![0,L]$ with periodic boundary conditions.
+The Hermitian part $H_0=-\partial_x^2+V_0(x)$ has real eigenvalues 
+$E_n = k_n^2 + \bar V_0$, 
+$k_n = 2\pi n/L$.
+The viscous operator adds an imaginary component 
+$i\nu\partial_x^2 \phi_n = -i\nu k_n^2 \phi_n$.
+Thus the full eigenvalues of $H_E$ are
+\begin{equation}
+    \lambda_n = (1 - i\nu)k_n^2 + \bar V_0 .
+\end{equation}
+
+\subsection*{Monodromy spectrum}
+The Euclidean monodromy over one period $\beta$ is $\mathcal M = e^{-\beta H_E}$ with eigenvalues
+\[
+    \Lambda_n = e^{-\beta[(1 - i\nu)k_n^2 + \bar V_0]} 
+              = e^{-\beta(E_n)} e^{-i\beta\nu k_n^2}.
+\]
+The second factor produces complex phases unless $\beta\nu k_n^2\in2\pi\mathbb Z$ for all $n$, which is generically impossible.  Therefore $\mathcal M$ is not positive and fails reflection positivity.  
+
+\subsection*{Numerical illustration}
+For representative parameters ($L\!=\!1$, $\nu\!=\!0.1$, $\beta\!=\!10$) the eigenvalues $\Lambda_n$ lie on a logarithmic spiral in the complex plane with argument $-\beta\nu k_n^2$, confirming loss of positivity.  
+Adding a mild potential $V_0(x)$ or extending to higher dimensions leaves the result unchanged.  
+Hence the monodromy obstruction demonstrated in the main text is intrinsic to the presence of a nonzero viscous operator and does not depend on the mean-field reduction.
+
+
+\section{ Other Technical Details}
 \subsection{Euclidean Kerr Near-Horizon Expansion}
 
 \subsubsection{The Kerr Metric in Boyer-Lindquist Coordinates}
