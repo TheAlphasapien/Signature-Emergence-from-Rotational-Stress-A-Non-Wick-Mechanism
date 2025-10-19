@@ -3,7 +3,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{physics}
-\usepackage{hyperref} 
+\usepackage{hyperref}
 \usepackage{enumitem}  % for [label=(\Alph*)] in enumerate
 \usepackage{geometry}
 \geometry{margin=1in}
@@ -60,7 +60,7 @@ The Wick rotation $(t \to i\tau)$ is ubiquitous in quantum field theory and stat
 \end{itemize}
 \subsection{The Challenge of Rotational Stress}
 
-The established thermal interpretation of Euclidean gravity, as exemplified by the Gibbons--Hawking calculation, depends fundamentally on a smooth, static manifold where the Euclidean time $\tau$ is periodic and unmixed with spatial coordinates \cite{GibbonsHawking1977}. 
+The established thermal interpretation of Euclidean gravity, as exemplified by the Gibbons--Hawking calculation, depends fundamentally on a smooth, static manifold where the Euclidean time $\tau$ is periodic and unmixed with spatial coordinates \cite{GibbonsHawking1977}.
 This success does not, however, address the deeper ontological question of signature selection when a system possesses internal stress.
 
 For a rotating black hole (Kerr metric\cite{Kerr1963}), the Euclidean time coordinate $\tau$ becomes necessarily mixed with the azimuthal angle $\phi$ via the frame-dragging effect (\autoref{subsec:eucl-kerr-nh}). This leads to the fundamental problem: \textbf{rotation-induced stress cannot dissipate within a closed, compact time dimension}. In the dual fluid description (via the Fluid/Gravity correspondence \cite{FluidGravity2008}), the rotational stress is mapped to \textbf{viscous vorticity ($\mathbf{\omega} = \nabla \times \mathbf{u}$)} near the horizon (\autoref{subsec:vorticity-dual}).
@@ -225,26 +225,26 @@ The only remaining possibility for preserving the Euclidean thermal state is if 
 The anti-Hermitian potential $iV_I$ can only be removed by a periodic transformation $U(\tau)=e^{-i\chi(\tau)}$ if $V_I(\mathbf{x}, \tau)$ satisfies a specific gauge-exact condition relating to $\partial_\tau\chi$ and commutators with $H_0$.
 
 \begin{lemma}[Non-removability of Viscous Dissipation]\label{lem:gauge-removability}
-The imaginary potential $V_I(\mathbf{x},\tau) = \nu|\nabla\psi|^2$ arising from the Meng-Yang mapping 
-cannot be removed by any smooth, single-valued gauge transformation $U(\tau) = e^{-i\chi(\tau)}$ 
+The imaginary potential $V_I(\mathbf{x},\tau) = \nu|\nabla\psi|^2$ arising from the Meng-Yang mapping
+cannot be removed by any smooth, single-valued gauge transformation $U(\tau) = e^{-i\chi(\tau)}$
 satisfying the periodicity constraint $U(\beta) = U(0)$.
 \end{lemma}
 
 \begin{proof}
 For gauge removal, we require $V_I(\tau) = \partial_\tau\chi(\tau) + [\chi(\tau), H_0(\tau)]$.
-Since $V_I(\mathbf{x},\tau)$ is a spatially-varying multiplicative potential, any $\chi(\tau,\mathbf{x})$ 
+Since $V_I(\mathbf{x},\tau)$ is a spatially-varying multiplicative potential, any $\chi(\tau,\mathbf{x})$
 must satisfy:
 \begin{equation}
 e^{-i\chi(\beta,\mathbf{x})} = e^{-i\chi(0,\mathbf{x})} \quad \forall \mathbf{x}
 \end{equation}
-This single-valuedness requirement cannot be satisfied globally for generic inhomogeneous 
-$V_I$ profiles without introducing topological defects. Therefore, the monodromy obstruction 
+This single-valuedness requirement cannot be satisfied globally for generic inhomogeneous
+$V_I$ profiles without introducing topological defects. Therefore, the monodromy obstruction
 is robust against gauge transformations.
 \end{proof}
 
 We prove that the viscous term obtained from the Meng--Yang mapping:
 \[
-        V_I(\mathbf x,\tau) \;=\; \nu\,|\nabla\psi(\mathbf x,\tau)|^2 \quad 	ext{(mean-field approximation of } i\nu\nabla^2\psi 	ext{)}
+        V_I(\mathbf x,\tau) \;=\; \nu\,|\nabla\psi(\mathbf x,\tau)|^2 \quad \text{(mean-field approximation of $i\nu\nabla^2\psi$)}
 \]
 is \textbf{not gauge-removable} because it is a spatially varying multiplicative potential, not proportional to a global conserved charge. The strict requirement for the transformation $\chi(\tau, \mathbf{x})$ to be single-valued and smooth on the closed $\tau$-circle for all spatial coordinates $\mathbf{x}$ cannot be globally satisfied for a generic, inhomogeneous $V_I$. The Monodromy Obstruction is thus a \textbf{physical and topological necessity}, not a coordinate artifact.
 
@@ -373,14 +373,14 @@ This observation naturally leads to a broader question: if Minkowski signature e
 \section{Operator--to--potential reduction and error estimate}
 \label{app:operator-to-potential}
 
-The Navier--Stokes to Schr\"odinger--Pauli mapping (Meng \& Yang~\cite{MengYang2024}) yields a viscous term that acts as the operator $i\nu\Delta$ on the spinor $\psi$.  
+The Navier--Stokes to Schr\"odinger--Pauli mapping (Meng \& Yang~\cite{MengYang2024}) yields a viscous term that acts as the operator $i\nu\Delta$ on the spinor $\psi$.
 To motivate the effective multiplicative potential used in the main text, we compute the expectation value of this operator and establish when it can be represented locally by $i\nu|\nabla\psi|^2$ up to small corrections.
 
 \subsection*{Expectation value identity}
 For square-integrable $\psi$ on a spatial domain~$V$ with suitable boundary conditions,
 \begin{align}
-    \langle \psi | i\nu\Delta | \psi\rangle 
-    &= i\nu \!\int_V \psi^* \Delta \psi \, d^3x 
+    \langle \psi | i\nu\Delta | \psi\rangle
+    &= i\nu \!\int_V \psi^* \Delta \psi \, d^3x
        = -i\nu \!\int_V |\nabla\psi|^2 d^3x
        + i\nu \!\oint_{\partial V} \psi^* \nabla\psi\!\cdot\! d\mathbf S .
 \end{align}
@@ -391,7 +391,7 @@ If the boundary term vanishes (periodic or no-flux boundaries, or coarse-grainin
 In this sense the operator contributes locally an imaginary potential density $i\nu|\nabla\psi|^2$ to leading order.
 
 \subsection*{Semiclassical reduction}
-Write $\psi=\sqrt{\rho}\,e^{iS/\hbar_{\mathrm{eff}}}$ with slowly varying amplitude $\rho$ and phase $S$.  
+Write $\psi=\sqrt{\rho}\,e^{iS/\hbar_{\mathrm{eff}}}$ with slowly varying amplitude $\rho$ and phase $S$.
 Then
 \[
 |\nabla\psi|^2
@@ -407,9 +407,9 @@ The corresponding energy-density interpretation of the viscous operator becomes
 with $\mathbf u=\nabla S/m^*$, justifying the identification $V_I=\nu|\nabla\psi|^2$ used in the main text.
 
 \subsection*{Error estimate}
-Let the coarse-graining scale be $\ell_{\mathrm{c}}$ and the typical variation scale of $\psi$ be $L\gg\ell_{\mathrm{c}}$.  
-Integrating by parts twice shows that neglected boundary and higher-derivative terms are suppressed by $(\ell_{\mathrm{c}}/L)^2$.  
-Defining $\varepsilon=(\ell_{\mathrm{c}}/L)^2$, the spectral phase shift due to these terms enters the monodromy operator $\mathcal M=e^{-\beta(H_0+iV_I)}$ only at $O(\varepsilon)$.  
+Let the coarse-graining scale be $\ell_{\mathrm{c}}$ and the typical variation scale of $\psi$ be $L\gg\ell_{\mathrm{c}}$.
+Integrating by parts twice shows that neglected boundary and higher-derivative terms are suppressed by $(\ell_{\mathrm{c}}/L)^2$.
+Defining $\varepsilon=(\ell_{\mathrm{c}}/L)^2$, the spectral phase shift due to these terms enters the monodromy operator $\mathcal M=e^{-\beta(H_0+iV_I)}$ only at $O(\varepsilon)$.
 Hence the replacement of $i\nu\Delta$ by $i\nu|\nabla\psi|^2$ introduces at most small, controllable corrections that do not affect the existence or absence of reflection positivity.
 
 \section{Toy operator model: persistence of the monodromy obstruction}
@@ -423,10 +423,10 @@ Consider $\tau$-independent Euclidean evolution generated by
     H_E = -\partial_x^2 + V_0(x) + i\nu\,\partial_x^2 ,
 \end{equation}
 on the interval $x\!\in\![0,L]$ with periodic boundary conditions.
-The Hermitian part $H_0=-\partial_x^2+V_0(x)$ has real eigenvalues 
-$E_n = k_n^2 + \bar V_0$, 
+The Hermitian part $H_0=-\partial_x^2+V_0(x)$ has real eigenvalues
+$E_n = k_n^2 + \bar V_0$,
 $k_n = 2\pi n/L$.
-The viscous operator adds an imaginary component 
+The viscous operator adds an imaginary component
 $i\nu\partial_x^2 \phi_n = -i\nu k_n^2 \phi_n$.
 Thus the full eigenvalues of $H_E$ are
 \begin{equation}
@@ -436,14 +436,14 @@ Thus the full eigenvalues of $H_E$ are
 \subsection*{Monodromy spectrum}
 The Euclidean monodromy over one period $\beta$ is $\mathcal M = e^{-\beta H_E}$ with eigenvalues
 \[
-    \Lambda_n = e^{-\beta[(1 - i\nu)k_n^2 + \bar V_0]} 
+    \Lambda_n = e^{-\beta[(1 - i\nu)k_n^2 + \bar V_0]}
               = e^{-\beta(E_n)} e^{-i\beta\nu k_n^2}.
 \]
-The second factor produces complex phases unless $\beta\nu k_n^2\in2\pi\mathbb Z$ for all $n$, which is generically impossible.  Therefore $\mathcal M$ is not positive and fails reflection positivity.  
+The second factor produces complex phases unless $\beta\nu k_n^2\in2\pi\mathbb Z$ for all $n$, which is generically impossible.  Therefore $\mathcal M$ is not positive and fails reflection positivity.
 
 \subsection*{Numerical illustration}
-For representative parameters ($L\!=\!1$, $\nu\!=\!0.1$, $\beta\!=\!10$) the eigenvalues $\Lambda_n$ lie on a logarithmic spiral in the complex plane with argument $-\beta\nu k_n^2$, confirming loss of positivity.  
-Adding a mild potential $V_0(x)$ or extending to higher dimensions leaves the result unchanged.  
+For representative parameters ($L\!=\!1$, $\nu\!=\!0.1$, $\beta\!=\!10$) the eigenvalues $\Lambda_n$ lie on a logarithmic spiral in the complex plane with argument $-\beta\nu k_n^2$, confirming loss of positivity.
+Adding a mild potential $V_0(x)$ or extending to higher dimensions leaves the result unchanged.
 Hence the monodromy obstruction demonstrated in the main text is intrinsic to the presence of a nonzero viscous operator and does not depend on the mean-field reduction.
 % =========================
 % Appendix B (new section)
@@ -664,9 +664,9 @@ g_{\tau\phi}(r_+) = -\frac{a r_+}{r_+^2 + a^2}
 \end{equation}
 
 \begin{remark}
-Equation~\eqref{eq:VI_kerr} represents an effective energy-density interpretation of the 
-operator form $i\nu\nabla^2$ appearing in the original Meng-Yang mapping. This mean-field 
-approximation is justified in the hydrodynamic limit where $|\nabla\psi|^2 \propto \rho u^2$ 
+Equation~\eqref{eq:VI_kerr} represents an effective energy-density interpretation of the
+operator form $i\nu\nabla^2$ appearing in the original Meng-Yang mapping. This mean-field
+approximation is justified in the hydrodynamic limit where $|\nabla\psi|^2 \propto \rho u^2$
 captures the local kinetic energy density of the fluid.
 \end{remark}
 
