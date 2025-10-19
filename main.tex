@@ -54,7 +54,7 @@ The Wick rotation $(t \to i\tau)$ is ubiquitous in quantum field theory and stat
 
 \paragraph{Recent Development (Meng \& Yang 2024):}
 \begin{itemize}
-\item NS equations map to non-Hermitian Schrödinger-Pauli equation
+\item NS equations map to non-Hermitian Schr\"odinger-Pauli equation
 \item Mapping includes ``Stern-Gerlach\cite{SternGerlach1922} term'' $\sigma \cdot B$
 \item Classical fluid interpreted as quantum spin system with imaginary diffusion
 \end{itemize}
@@ -76,7 +76,7 @@ To explore the mathematical nature of this constraint, we require a framework th
 We demonstrate that the incompatibility of rotation with closed Euclidean time is not merely a conceptual analogy but a \textbf{robust mathematical necessity} for signature selection. This work makes the following contributions:
 
 \begin{enumerate}
-    \item \textbf{Non-Hermitian Source Term:} We utilize the Meng \& Yang Navier–Stokes $\to$ Schrödinger–Pauli Equation (SPE) mapping \cite{MengYang2024} to show that the rotation-induced vorticity of the dual Kerr boundary fluid introduces a \textbf{physical anti-Hermitian imaginary potential} $iV_I(\mathbf{x}, \tau)$ into the Euclidean generator $H_E(\tau)$ (\autoref{subsec:VI-kerr}). We compute the scaling of this potential to be proportional to $\nu(\Omega_H r_+)^2$ for the Kerr geometry, proving $\overline{V_I} \neq 0$ (\autoref{subsec:VI-kerr}, \autoref{subsec:vorticity-dual}).
+    \item \textbf{Non-Hermitian Source Term:} We utilize the Meng \& Yang Navier–Stokes $\to$ Schr\"odinger–Pauli Equation (SPE) mapping \cite{MengYang2024} to show that the rotation-induced vorticity of the dual Kerr boundary fluid introduces a \textbf{physical anti-Hermitian imaginary potential} $iV_I(\mathbf{x}, \tau)$ into the Euclidean generator $H_E(\tau)$ (\autoref{subsec:VI-kerr}). We compute the scaling of this potential to be proportional to $\nu(\Omega_H r_+)^2$ for the Kerr geometry, proving $\overline{V_I} \neq 0$ (\autoref{subsec:VI-kerr}, \autoref{subsec:vorticity-dual}).
 
    \item \textbf{The Monodromy Obstruction Theorem:} We prove that a non-zero, non-removable time-averaged imaginary potential $\overline{V_I}$ leads to \textbf{complex-phased eigenvalues} in the Monodromy operator $\mathcal{M}$ (\autoref{subsec:monodromy-rp}). This violates \textbf{Reflection Positivity\cite{OsterwalderSchrader1973}} and formally demonstrates that the smooth, periodic Euclidean thermal state for a rotating black hole is \textbf{mathematically inconsistent} (\autoref{subsec:monodromy-rp}).
 
@@ -107,9 +107,9 @@ Angular momentum $J$ & Vorticity $\mathbf{\omega}$ \\
 
 In this context, the frame-dragging effect of the rotating Kerr black hole \cite{Kerr1963} is precisely mapped to the \textbf{vorticity} ($\mathbf{\omega} = \nabla \times \mathbf{u}$) of the dual fluid. This is the central link: gravitational rotation is mathematically equivalent to the fluid's viscous stress.
 
-\subsection{The Non-Hermitian Schrödinger--Pauli Mapping}
+\subsection{The Non-Hermitian Schr\"odinger--Pauli Mapping}
 
-The second tool is the \textbf{non-Hermitian quantum spin representation} of the Navier--Stokes (NS) equation, developed by Meng and Yang \cite{MengYang2024}. This mapping shows that the incompressible NS equations can be written as a two-component Schrödinger--Pauli Equation (SPE). This transformation is essential because it moves the problem from classical fluid dynamics into the language of quantum mechanics, where the condition of Hermiticity ($\hat{H} = \hat{H}^\dagger$) is directly tied to the fundamental physical requirement of energy conservation (unitarity).
+The second tool is the \textbf{non-Hermitian quantum spin representation} of the Navier-Stokes (NS) equation, developed by Meng and Yang \cite{MengYang2024}. This mapping shows that the incompressible NS equations can be written as a two-component Schr\"odinger--Pauli Equation (SPE). This transformation is essential because it moves the problem from classical fluid dynamics into the language of quantum mechanics, where the condition of Hermiticity ($\hat{H} = \hat{H}^\dagger$) is directly tied to the fundamental physical requirement of energy conservation (unitarity).
 
 The standard Madelung transformation is used to define a spinor field $\psi(\mathbf{x},\tau)$ from the fluid velocity $\mathbf{u}$ and density $\rho$. When the NS equation is recast in this quantum form, the presence of \textbf{viscosity ($\nu$)} introduces an unavoidable anti-Hermitian component into the resulting Hamiltonian $H$:
 \begin{equation}\label{eq:HE_decomp}
@@ -118,7 +118,7 @@ The standard Madelung transformation is used to define a spinor field $\psi(\mat
 where $H_0(\tau)=H_0(\tau)^\dagger$ is the Hermitian part, and the imaginary potential $V_I(\mathbf{x}, \tau)$ is proportional to the \textbf{viscous dissipation}.
 
 \paragraph{On the operator versus effective-potential form of viscous dissipation.}
-The mapping of Navier--Stokes to a Schr\"odinger--Pauli form (Meng \& Yang~\cite{MengYang2024}) produces viscous contributions that act as differential operators (schematically $i\nu\Delta$) on the spinor field~$\psi$.  In the present work we adopt a \emph{coarse-grained effective potential} representation,
+The mapping of Navier-Stokes to a Schr\"odinger--Pauli form (Meng \& Yang~\cite{MengYang2024}) produces viscous contributions that act as differential operators (schematically $i\nu\Delta$) on the spinor field~$\psi$.  In the present work we adopt a \emph{coarse-grained effective potential} representation,
 \begin{equation}
     V_I(\mathbf x,\tau)\;=\;\nu\,|\nabla\psi(\mathbf x,\tau)|^2,
 \end{equation}
@@ -182,7 +182,7 @@ where $\mathcal T$ denotes time ordering and $H_E(\tau)$ is the Euclidean time e
 
 For $\mathcal{M}$ to define a \textbf{bona fide thermal state} $\rho_\beta$ that can be Wick-rotated back to a smooth, unitary Lorentzian quantum field theory, the operator must satisfy the \textbf{Osterwalder--Schrader Reflection Positivity condition \cite{OsterwalderSchrader1973}. This condition essentially requires that $\mathcal{M}$ must be a positive operator with a real, positive spectrum, allowing it to be interpreted as $e^{-\beta \widehat{H}}$ where $\widehat{H}$ is a Hermitian Lorentzian Hamiltonian ($\widehat{H} = \widehat{H}^\dagger$).
 
-From the Navier--Stokes $\to$ Schrödinger--Pauli mapping (Section 2.2), the Euclidean generator is decomposed into a Hermitian part $H_0$ and the rotation-induced anti-Hermitian part $iV_I$:
+From the Navier-Stokes $\to$ Schr\"odinger--Pauli mapping (Section 2.2), the Euclidean generator is decomposed into a Hermitian part $H_0$ and the rotation-induced anti-Hermitian part $iV_I$:
 \begin{equation}\label{eq:HE_decomp}
     H_E(\tau) \;=\; H_0(\tau) \;+\; i\,V_I(\tau).
 \end{equation}
@@ -283,7 +283,7 @@ The Monodromy Obstruction proves the mathematical necessity of a non-compact tem
 
 \subsection{Vorticity as an Effective Magnetic Field}
 
-In the two-component Schrödinger--Pauli Equation (SPE) derived from the Navier--Stokes system, the vorticity $\mathbf{\omega} = \nabla \times \mathbf{u}$ acts precisely as an effective magnetic field, $\mathbf{B}_{\text{eff}} \sim \mathbf{\omega}$. The spinor components $\psi$ are coupled via an interaction term analogous to the Zeeman effect: $\mathbf{S} \cdot \mathbf{B}_{\text{eff}}$, where $\mathbf{S}$ is the spin operator.
+In the two-component Schr\"odinger--Pauli Equation (SPE) derived from the Navier-Stokes system, the vorticity $\mathbf{\omega} = \nabla \times \mathbf{u}$ acts precisely as an effective magnetic field, $\mathbf{B}_{\text{eff}} \sim \mathbf{\omega}$. The spinor components $\psi$ are coupled via an interaction term analogous to the Zeeman effect: $\mathbf{S} \cdot \mathbf{B}_{\text{eff}}$, where $\mathbf{S}$ is the spin operator.
 
 The vorticity created by the Kerr frame-dragging (Section 3) attempts to align the microscopic fluid elements (spinors) along its axis $\mathbf{\Omega_H}$. This alignment process involves two competing effects:
 
@@ -327,7 +327,7 @@ Accordingly, we no longer claim numerical comparability. Instead, we emphasize t
 \emph{Under the following assumptions:}
 \begin{enumerate}[label=(\Alph*)]
     \item The near-horizon fluid description applies and is incompressible (membrane paradigm regime).
-    \item The viscous term in the Navier–Stokes $\to$ Schrödinger–Pauli mapping is represented by an effective local imaginary potential $V_I(\mathbf{x},\tau)$ as in Eq.~\eqref{eq:HE_decomp}, valid in the coarse-grained semiclassical limit.
+    \item The viscous term in the Navier–Stokes $\to$ Schr\"odinger–Pauli mapping is represented by an effective local imaginary potential $V_I(\mathbf{x},\tau)$ as in Eq.~\eqref{eq:HE_decomp}, valid in the coarse-grained semiclassical limit.
     \item The dominant Euclidean saddle is $\tau$-independent to leading order (quasi-stationary approximation).
 \end{enumerate}
 \emph{Then: if the time-averaged imaginary potential $\overline{V_I}$ is non-zero and not gauge-exact on the thermal circle, the Euclidean monodromy operator $\mathcal{M}$ fails Reflection Positivity. Consequently, a non-compact temporal channel (Minkowski signature) is required to restore spectral stability.}
@@ -373,7 +373,7 @@ This observation naturally leads to a broader question: if Minkowski signature e
 \section{Operator--to--potential reduction and error estimate}
 \label{app:operator-to-potential}
 
-The Navier--Stokes to Schr\"odinger--Pauli mapping (Meng \& Yang~\cite{MengYang2024}) yields a viscous term that acts as the operator $i\nu\Delta$ on the spinor $\psi$.
+The Navier-Stokes to Schr\"odinger--Pauli mapping (Meng \& Yang~\cite{MengYang2024}) yields a viscous term that acts as the operator $i\nu\Delta$ on the spinor $\psi$.
 To motivate the effective multiplicative potential used in the main text, we compute the expectation value of this operator and establish when it can be represented locally by $i\nu|\nabla\psi|^2$ up to small corrections.
 
 \subsection*{Expectation value identity}
@@ -764,12 +764,12 @@ The vorticity calculation demonstrates:
 
 The vorticity is not an artifact of the mapping—it's the fluid-dual representation of the geometric frame-dragging that creates the rotational stress requiring resolution via signature emergence.
 
-\subsection{Non-Hermitian Schrödinger-Pauli Mapping}
+\subsection{Non-Hermitian Schr\"odinger-Pauli Mapping}
 \label{subsec:ns-spinor-mapping}
 
 \subsubsection{Background}
 
-Meng \& Yang (2024) demonstrated that the incompressible Navier-Stokes equations can be mapped to a non-Hermitian Schrödinger-Pauli equation for a quantum spin system. This mapping provides the mathematical framework for understanding NS turbulence as suppressed quantum dynamics with an essential dissipative component.
+Meng \& Yang (2024) demonstrated that the incompressible Navier-Stokes equations can be mapped to a non-Hermitian Schr\"odinger-Pauli equation for a quantum spin system. This mapping provides the mathematical framework for understanding NS turbulence as suppressed quantum dynamics with an essential dissipative component.
 
 \subsubsection{The Navier-Stokes Equations}
 
@@ -806,7 +806,7 @@ V_I^{(\text{Kerr})} = \nu\frac{m^{*2}}{\hbar_{\text{eff}}^2}\rho(\Omega_H r_+)^2
 \end{equation}
 This scaling confirms $\overline{V_I} \neq 0$ for all $J \neq 0$.
 
-\subsubsection{The Resulting Schrödinger-Pauli Equation}
+\subsubsection{The Resulting Schr\"odinger-Pauli Equation}
 
 The NS equations transform to:
 \begin{equation}
