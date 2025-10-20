@@ -81,6 +81,8 @@ We demonstrate that the incompatibility of rotation with closed Euclidean time i
 
    \item \textbf{The Monodromy Obstruction Theorem:} We prove that a non-zero, non-removable time-averaged imaginary potential $\overline{V_I}$ leads to \textbf{complex-phased eigenvalues} in the Monodromy operator $\mathcal{M}$ (\autoref{subsec:monodromy-rp}). This violates \textbf{Reflection Positivity\cite{OsterwalderSchrader1973}} and formally demonstrates that the smooth, periodic Euclidean thermal state for a rotating black hole is \textbf{mathematically inconsistent} (\autoref{subsec:monodromy-rp}).
 
+   Reflection positivity, originally formulated in the Osterwalder--Schrader axioms as the key criterion enabling analytic continuation from Euclidean to Lorentzian quantum field theory, has since been given a precise representation--theoretic formulation~\cite{NeebOlafsson2018}.  In this framework, a Euclidean theory admits a Lorentzian counterpart only if its correlation functions define a reflection positive representation of the underlying symmetry group.
+
     \item \textbf{Gauge Robustness:} We preemptively address the objection that $iV_I$ could be a gauge artifact, proving that the spatially-dependent viscous term $V_I(\mathbf{x}, \tau) = \nu|\nabla\psi|^2$ is \textbf{not gauge-removable} by a smooth, single-valued periodic transformation $\chi(\tau)$ (\autoref{subsec:gauge-removability}). This establishes the robustness of the obstruction.
 
     \item \textbf{Physical Interpretation:} The only physically consistent resolution to this Monodromy Obstruction is the emergence of a \textbf{Minkowski temporal channel} (the signature flip) that provides a non-compact, dissipative outlet for the rotational stress, thereby resolving the spectral instability (\autoref{subsec:ns-spinor-mapping}). This establishes the Euclidean regularity condition $\beta = 4\pi/\kappa$ \cite{GibbonsHawking1977} as a \textbf{mathematical fingerprint} of the required Minkowski dynamics.
@@ -206,6 +208,22 @@ The Monodromy Obstruction arises because the anti-Hermitian component $iV_I(\tau
 Assuming for simplicity a constant-in-$\tau$ approximation where $H_E(\tau) \approx H_E$, the Monodromy operator simplifies to $\mathcal{M} = e^{-\beta H_E}$. If $H_E$ has eigenvalues $\lambda_n = \epsilon_n + i v_n$, then the Monodromy operator has eigenvalues $m_n = e^{-\beta \lambda_n} = e^{-\beta \epsilon_n} e^{-i \beta v_n}$.
 
 For reflection positivity to hold, the eigenvalues $m_n$ must be real and positive, which requires the imaginary phase to vanish: $e^{-i\beta v_n}=1$, implying $\beta v_n \in 2\pi\mathbb Z$ for all eigenstates. Since the imaginary component $v_n$ is directly related to the non-zero viscous dissipation $V_I$ (which is spatially varying and generically non-quantized), this condition is almost always \textbf{impossible to satisfy simultaneously} for a rotating system.
+
+From the representation--theoretic standpoint, this breakdown can be understood in the language
+of reflection--positive semigroups~\cite{NeebOlafsson2018}.
+In the Osterwalder--Schrader framework, the Euclidean evolution operator
+$\mathcal{M}_0 = e^{-\beta H_E}$ defines a reflection--positive kernel only when its spectrum is
+real and non-negative, ensuring analytic continuation to a unitary Lorentzian theory.
+Introducing the rotational source modifies this operator to
+\[
+\mathcal{M} = e^{-\beta (1 - i\nu) H_E},
+\]
+which preserves the semigroup structure but drives the eigenvalues into the complex plane.
+This deformation violates the reflection positivity condition---and hence the conditions for
+Osterwalder--Schrader reconstruction---by introducing a non-Hermitian spectral phase.  The
+resulting complex eigenvalue trajectory corresponds precisely to the Monodromy Obstruction,
+marking the point at which the Euclidean thermal description becomes mathematically
+inconsistent for $J \neq 0$.
 
 \paragraph{The Obstruction.}
 Since the rotational source leads to a non-zero time-averaged imaginary potential $\overline{V_I} \neq 0$ (Eq. \ref{eq:VI_kerr}), the Monodromy operator $\mathcal{M}$ is guaranteed to acquire \textbf{complex-phased eigenvalues}.
@@ -386,6 +404,12 @@ necessitating a Minkowski temporal channel at all scales. Observable Hawking rad
 is the thermally-averaged macroscopic signature of this fundamental quantum process.
 \end{enumerate}
 
+\paragraph{OS axioms and reflection positivity.}
+The Osterwalder--Schrader framework identifies reflection positivity as the structural condition that permits Euclidean Schwinger functions to reconstruct a unitary Lorentzian theory~\cite{NeebOlafsson2018}.  Our monodromy obstruction should therefore be read not as a mere failure of a chosen contour for Wick rotation, but as a dynamical violation of OS2: the anti-Hermitian horizon source induced by rotation produces complex eigenvalues for the Euclidean evolution operator and thus generates an indefinite sesquilinear form for the would-be OS inner product.  Concretely, the spectral winding visible in Figure~1. furnishes explicit eigenmodes for which the RP quadratic form fails, so that OS reconstruction cannot proceed.  In this sense the signature flip is not an analytic convenience but the physically required resolution to a spectral inconsistency that prevents a compact Euclidean thermal state.
+
+\paragraph{Clarifying the logical structure.}
+The Osterwalder--Schrader axioms do not \emph{define} the Wick rotation but rather specify the conditions under which analytic continuation between Euclidean and Lorentzian theories is mathematically well-posed.  Reflection positivity, in particular, guarantees that the Euclidean evolution operator corresponds to a Hermitian generator of time translations after continuation.  In the present framework, the breakdown of reflection positivity is therefore not assumed but \emph{derived}: rotation introduces an anti--Hermitian component that drives the Euclidean spectrum off the real axis, violating the positivity condition required by the OS correspondence.  The resulting failure of analytic continuation is thus a dynamical effect---a physical obstruction to the existence of a Hermitian temporal generator---rather than a circular restatement of the Wick rotation’s premises.  This distinction is essential: the monodromy obstruction identifies when Euclidean regularity ceases to be physically meaningful, not merely when it is algebraically inconvenient.
+
 \subsection{Physical Interpretation}
 
 This provides a unified, multi-scale explanation of signature selection. The Euclidean 
@@ -414,6 +438,22 @@ a \textbf{physically necessary consequence} of rotational dynamics in quantum gr
 The Euclidean-to-Minkowski transition is the unique resolution to a fundamental 
 geometric constraint, making the observed $(-,+,+,+)$ signature of spacetime a 
 derivable feature rather than an input assumption.
+
+\subsection*{Interpretation of the Monodromy Spiral}
+
+The complex eigenvalue spiral of
+\[
+\mathcal{M} = e^{-\beta (1 - i\nu) H_E}
+\]
+illustrates the spectral imprint of the Monodromy Obstruction.
+For a real, positive Euclidean spectrum \(E_n\), the eigenvalues
+\(\Lambda_n = e^{-\beta(1 - i\nu)E_n}\)
+trace a logarithmic path in the complex plane, encoding the simultaneous presence of Euclidean damping (\(e^{-\beta E_n}\)) and Lorentzian phase rotation (\(e^{i\beta\nu E_n}\)).
+This spiral geometry visualizes the loss of reflection positivity: as rotational stress introduces an imaginary component to the Euclidean propagator, eigenvalues acquire nonzero phase and wind toward the origin rather than remaining on the positive real axis.
+The result is a \emph{spectral signature of non-Hermiticity}, equivalent to the analytic obstruction that forbids a smooth, periodic Euclidean thermal state in the rotating case.
+In physical terms, the inward winding represents dissipative decay, while the angular advance corresponds to the emergent Minkowski channel that resolves the compact-time incompatibility.
+The monodromy spiral therefore provides a direct spectral visualization of signature emergence—the transition from real (Euclidean) eigenvalues to complex (Lorentzian) spectra under rotation.
+
 
 \subsection{Implications}
 
