@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{enumitem}  % for [label=(\Alph*)] in enumerate
 \usepackage{geometry}
+\usepackage{graphicx}
 \geometry{margin=1in}
 \newtheorem{lemma}{Lemma}
 \newtheorem{remark}{Remark}
@@ -585,6 +586,21 @@ The second factor produces complex phases unless $\beta\nu k_n^2\in2\pi\mathbb Z
 For representative parameters ($L\!=\!1$, $\nu\!=\!0.1$, $\beta\!=\!10$) the eigenvalues $\Lambda_n$ lie on a logarithmic spiral in the complex plane with argument $-\beta\nu k_n^2$, confirming loss of positivity.
 Adding a mild potential $V_0(x)$ or extending to higher dimensions leaves the result unchanged.
 Hence the monodromy obstruction demonstrated in the main text is intrinsic to the presence of a nonzero viscous operator and does not depend on the mean-field reduction.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\linewidth]{monodromy_spiral.png}
+    \caption{Eigenvalue spectrum of the Euclidean monodromy operator 
+    $\mathcal{M} = e^{-\beta H_E}$ for the toy model of 
+    Appendix~\ref{app:operator-toy}, with parameters 
+    $\nu = 0.1$, $\beta = 10$, $L = 1$. 
+    The eigenvalues $\Lambda_n$ lie on a logarithmic spiral 
+    in the complex plane, with argument $-\beta\nu k_n^2$, 
+    demonstrating loss of reflection positivity 
+    due to rotational dissipation.}
+    \label{fig:monodromy_spiral}
+\end{figure}
+
 % =========================
 % Appendix B (new section)
 % =========================
