@@ -558,6 +558,17 @@ The complex eigenvalue spiral of
 \mathcal{M} = e^{-\beta (1 - i\nu) H_E}
 \]
 illustrates the spectral imprint of the Monodromy Obstruction.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.6\linewidth]{monodromy_spiral.png}
+    \caption{Eigenvalue spectrum of the Euclidean monodromy operator 
+    $\mathcal{M} = e^{-\beta H_E}$ for the toy model of 
+    Appendix~\ref{app:operator-toy}, with parameters 
+    $\nu = 0.1$, $\beta = 10$, $L = 1$.}
+    \label{fig:monodromy_spiral}
+\end{figure}
+
 For a real, positive Euclidean spectrum \(E_n\), the eigenvalues
 \(\Lambda_n = e^{-\beta(1 - i\nu)E_n}\)
 trace a logarithmic path in the complex plane, encoding the simultaneous presence of Euclidean damping (\(e^{-\beta E_n}\)) and Lorentzian phase rotation (\(e^{i\beta\nu E_n}\)).
@@ -651,9 +662,12 @@ constraints to macroscopic phenomena in other contexts (cosmology, AdS/CFT).
 \item \textbf{Mathematical}: The connection between NS regularity and reflection 
 positivity suggests new approaches to the Millennium Problem via spectral methods 
 and non-Hermitian analysis.
+
+\item \textbf{Scale invariance and nested horizons}: One significant aspect of this emergent picture of spacetime signature is the conspicuous repetition of structure across scales. Black holes appear not only as external astrophysical objects but also as internal features of quantum geometry, suggesting a nested hierarchy of horizon-like phenomena. This nesting and rescaling, driven by thermal averaging and suppression, points toward scale invariance as a potentially fundamental organizing principle of the universe. Investigating whether conformal or fractal-like symmetries underlie the dynamics of signature emergence could open new avenues in quantum gravity and cosmology.
+
 \end{itemize}
 
-The central message is that \textbf{spacetime signature is not fundamental but 
+The central finding is that \textbf{spacetime signature is not fundamental but 
 emergent}, selected by physical dynamics (rotation, dissipation) rather than imposed 
 by fiat. This reframes the Wick rotation from an analytical trick to the mathematical 
 shadow of a real physical process---the quantum-geometric resolution of rotational 
@@ -733,20 +747,6 @@ The Euclidean monodromy over one period $\beta$ is $\mathcal M = e^{-\beta H_E}$
               = e^{-\beta(E_n)} e^{-i\beta\nu k_n^2}.
 \]
 The second factor produces complex phases unless $\beta\nu k_n^2\in2\pi\mathbb Z$ for all $n$, which is generically impossible.  Therefore $\mathcal M$ is not positive and fails reflection positivity.
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.6\linewidth]{monodromy_spiral.png}
-    \caption{Eigenvalue spectrum of the Euclidean monodromy operator 
-    $\mathcal{M} = e^{-\beta H_E}$ for the toy model of 
-    Appendix~\ref{app:operator-toy}, with parameters 
-    $\nu = 0.1$, $\beta = 10$, $L = 1$. 
-    The eigenvalues $\Lambda_n$ lie on a logarithmic spiral 
-    in the complex plane, with argument $-\beta\nu k_n^2$, 
-    demonstrating loss of reflection positivity 
-    due to rotational dissipation.}
-    \label{fig:monodromy_spiral}
-\end{figure}
 
 \subsection*{Numerical illustration}
 For representative parameters ($L\!=\!1$, $\nu\!=\!0.1$, $\beta\!=\!10$) the eigenvalues $\Lambda_n$ lie on a logarithmic spiral in the complex plane with argument $-\beta\nu k_n^2$, confirming loss of positivity.
