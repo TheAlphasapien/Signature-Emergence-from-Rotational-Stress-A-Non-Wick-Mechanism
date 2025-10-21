@@ -26,15 +26,26 @@ We propose a physical mechanism for the emergence of Minkowski signature from Eu
 
 \section{Introduction}
 
+
 \subsection{The Ontological Problem of Wick Rotation}
 
-The Wick rotation $(t \to i\tau)$ is ubiquitous in quantum field theory and statistical mechanics, yet its physical meaning remains unclear. While mathematically convenient for path integral convergence, the transformation from Minkowski $(-,+,+,+)$ to Euclidean $(+,+,+,+)$ signature is typically treated as a purely analytical tool.
+The Wick rotation $(t \to i\tau)$ is a ubiquitous tool in quantum field theory and statistical mechanics. It facilitates the convergence of path integrals, simplifies calculations by mapping Lorentzian spacetimes to Euclidean ones, and underpins the thermal interpretation of black hole horizons via the Gibbons--Hawking procedure. Despite its computational utility, the physical meaning of Wick rotation remains elusive.
+
+Historically, Wick rotation has been treated as a formal analytic continuation, justified by the assumption that the underlying theory admits a well-defined Euclidean counterpart. The Osterwalder--Schrader axioms formalize the conditions under which such a continuation yields a unitary Lorentzian quantum field theory, with reflection positivity playing a central role. However, these axioms are mathematical constraints rather than physical derivations, and they do not explain why nature selects a Lorentzian signature in the first place.
+
+Several attempts have been made to endow Wick rotation with a more physical interpretation. For instance, Hartle and Hawking's ``no-boundary'' proposal~\cite{HartleHawking1983} uses a Euclidean path integral to define the wavefunction of the universe, suggesting that the Lorentzian signature emerges dynamically from a Euclidean regime. More recently, approaches in loop quantum gravity~\cite{BojowaladBrahma2016} and causal dynamical triangulations have explored signature change as a quantum gravitational phenomenon. Yet, these frameworks often rely on specific quantization schemes or boundary conditions, and do not directly address the role of internal stresses---such as rotation---in driving signature selection.
+
+A central challenge in interpreting the Wick rotation physically is identifying the appropriate degrees of freedom that encode the thermal and dynamical properties of spacetime. In the context of black hole thermodynamics, the \textbf{membrane paradigm} offers a compelling framework: it models the black hole horizon as a fictitious, timelike surface endowed with fluid-like properties, including viscosity, conductivity, and vorticity. This \textbf{stretched horizon} serves as a natural boundary where gravitational dynamics project onto an effective \textbf{dissipative fluid system}, as formalized in the \textbf{Fluid/Gravity correspondence}~\cite{FluidGravity2008}.
+
+This boundary-centric viewpoint is particularly well-suited for analyzing the Euclidean continuation of black hole spacetimes. The \textbf{Euclidean Kerr geometry}, for instance, imposes a periodicity in imaginary time to avoid conical singularities at the horizon~\cite{GibbonsHawking1977}. However, when rotation is present, the frame-dragging effect entangles temporal and angular coordinates, introducing \textbf{vorticity} in the dual fluid. This vorticity, in turn, acts as an effective magnetic field in the \textbf{non-Hermitian Schr\"odinger--Pauli mapping} of the Navier--Stokes equations~\cite{MengYang2024}, leading to a \textbf{Stern--Gerlach--like spin alignment process}.
+
+The \textbf{boundary fluid} thus becomes the stage where the incompatibility between rotation and Euclidean periodicity is most transparently realized. By focusing on this boundary, we gain access to a \textbf{quantum mechanical description} of dissipation and stress, enabling a precise analysis of how rotational dynamics obstruct the existence of a smooth Euclidean thermal state. This motivates our central claim: that the \textbf{signature of spacetime is not a fixed input}, but an \textbf{emergent feature} dictated by the \textbf{spectral stability of the boundary dynamics}.
 
 \textbf{Key Questions:}
 \begin{enumerate}
-\item What does ``imaginary time'' mean physically?
-\item Why does the Wick rotation work?
-\item Can signature selection be derived from physical principles?
+  \item What does ``imaginary time'' mean physically?
+  \item Why does the Wick rotation work?
+  \item Can signature selection be derived from physical principles, rather than imposed as a mathematical convenience?
 \end{enumerate}
 
 \subsection{Established Results}
