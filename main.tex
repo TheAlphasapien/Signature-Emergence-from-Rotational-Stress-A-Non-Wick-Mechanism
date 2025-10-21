@@ -35,7 +35,7 @@ Historically, Wick rotation has been treated as a formal analytic continuation, 
 
 Several attempts have been made to endow Wick rotation with a more physical interpretation. For instance, Hartle and Hawking's ``no-boundary'' proposal~\cite{HartleHawking1983} uses a Euclidean path integral to define the wavefunction of the universe, suggesting that the Lorentzian signature emerges dynamically from a Euclidean regime. More recently, approaches in loop quantum gravity~\cite{BojowaladBrahma2016} and causal dynamical triangulations have explored signature change as a quantum gravitational phenomenon. Yet, these frameworks often rely on specific quantization schemes or boundary conditions, and do not directly address the role of internal stresses---such as rotation---in driving signature selection.
 
-A central challenge in interpreting the Wick rotation physically is identifying the appropriate degrees of freedom that encode the thermal and dynamical properties of spacetime. In the context of black hole thermodynamics, the \textbf{membrane paradigm} offers a compelling framework: it models the black hole horizon as a fictitious, timelike surface endowed with fluid-like properties, including viscosity, conductivity, and vorticity. This \textbf{stretched horizon} serves as a natural boundary where gravitational dynamics project onto an effective \textbf{dissipative fluid system}, as formalized in the \textbf{Fluid/Gravity correspondence}~\cite{FluidGravity2008}.
+A central challenge in interpreting the Wick rotation physically is identifying the appropriate degrees of freedom that encode the thermal and dynamical properties of spacetime. In the context of black hole thermodynamics, the \textbf{membrane paradigm} offers a compelling framework: it models the black hole horizon as a fictitious, timelike surface endowed with fluid-like properties, including viscosity, conductivity, and vorticity. This \textbf{stretched horizon} serves as a natural boundary where gravitational dynamics project onto an effective \textbf{dissipative fluid system}, as formalized in the \textbf{Fluid/Gravity correspondence}~\cite{FluidGravity2005}.
 
 This boundary-centric viewpoint is particularly well-suited for analyzing the Euclidean continuation of black hole spacetimes. The \textbf{Euclidean Kerr geometry}, for instance, imposes a periodicity in imaginary time to avoid conical singularities at the horizon~\cite{GibbonsHawking1977}. However, when rotation is present, the frame-dragging effect entangles temporal and angular coordinates, introducing \textbf{vorticity} in the dual fluid. This vorticity, in turn, acts as an effective magnetic field in the \textbf{non-Hermitian Schr\"odinger--Pauli mapping} of the Navier--Stokes equations~\cite{MengYang2024}, leading to a \textbf{Stern--Gerlach--like spin alignment process}.
 
@@ -57,7 +57,7 @@ The \textbf{boundary fluid} thus becomes the stage where the incompatibility bet
 \item This determines Hawking temperature
 \end{itemize}
 
-\paragraph{From Fluid/Gravity Correspondence\cite{FluidGravity2008}:}
+\paragraph{From Fluid/Gravity Correspondence\cite{FluidGravity2005}:}
 \begin{itemize}
 \item Black hole horizons map to viscous fluid dynamics
 \item Kerr rotation induces vorticity in the dual fluid
@@ -67,7 +67,7 @@ The \textbf{boundary fluid} thus becomes the stage where the incompatibility bet
 \paragraph{Recent Development (Meng \& Yang 2024):}
 \begin{itemize}
 \item NS equations map to non-Hermitian Schr\"odinger-Pauli equation
-\item Mapping includes ``Stern-Gerlach\cite{SternGerlach1922} term'' $\sigma \cdot B$
+\item Mapping includes ``Stern-Gerlach\cite{SternGerlach1924} term'' $\sigma \cdot B$
 \item Classical fluid interpreted as quantum spin system with imaginary diffusion
 \end{itemize}
 \subsection{The Challenge of Rotational Stress}
@@ -75,7 +75,7 @@ The \textbf{boundary fluid} thus becomes the stage where the incompatibility bet
 The established thermal interpretation of Euclidean gravity, as exemplified by the Gibbons--Hawking calculation, depends fundamentally on a smooth, static manifold where the Euclidean time $\tau$ is periodic and unmixed with spatial coordinates \cite{GibbonsHawking1977}.
 This success does not, however, address the deeper ontological question of signature selection when a system possesses internal stress.
 
-For a rotating black hole (Kerr metric\cite{Kerr1963}), the Euclidean time coordinate $\tau$ becomes necessarily mixed with the azimuthal angle $\phi$ via the frame-dragging effect (\autoref{subsec:eucl-kerr-nh}). This leads to the fundamental problem: \textbf{rotation-induced stress cannot dissipate within a closed, compact time dimension}. In the dual fluid description (via the Fluid/Gravity correspondence \cite{FluidGravity2008}), the rotational stress is mapped to \textbf{viscous vorticity ($\mathbf{\omega} = \nabla \times \mathbf{u}$)} near the horizon (\autoref{subsec:vorticity-dual}).
+For a rotating black hole (Kerr metric\cite{Kerr1963}), the Euclidean time coordinate $\tau$ becomes necessarily mixed with the azimuthal angle $\phi$ via the frame-dragging effect (\autoref{subsec:eucl-kerr-nh}). This leads to the fundamental problem: \textbf{rotation-induced stress cannot dissipate within a closed, compact time dimension}. In the dual fluid description (via the Fluid/Gravity correspondence \cite{FluidGravity2005}), the rotational stress is mapped to \textbf{viscous vorticity ($\mathbf{\omega} = \nabla \times \mathbf{u}$)} near the horizon (\autoref{subsec:vorticity-dual}).
 
 If a rotating black hole must settle into a smooth thermal state with period $\beta$, then the system, when described in Euclidean time, must be \textbf{time-reversible and non-dissipative} (Hermitian). However, the rotational stress is fundamentally dissipative (viscous) and requires a channel to carry away angular momentum and energy \cite{Hawking1975}. The topological constraint of closed Euclidean time prevents this dissipation, creating an internal mathematical contradiction:
 \[
@@ -102,9 +102,9 @@ We demonstrate that the incompatibility of rotation with closed Euclidean time i
 
 To formally establish the mathematical incompatibility between rotational stress and Euclidean periodicity, we employ a two-step framework that connects general relativity to non-Hermitian quantum mechanics.
 
-\subsection{The Fluid/Gravity Correspondence\cite{FluidGravity2008}}
+\subsection{The Fluid/Gravity Correspondence\cite{FluidGravity2005}}
 
-The first step leverages the \textbf{Fluid/Gravity Correspondence\cite{FluidGravity2008}}, which demonstrates that the dynamics of a gravitational bulk (a black hole spacetime) are dual to the dynamics of a viscous, incompressible fluid on a boundary (the stretched horizon) \cite{FluidGravity2008}. This duality provides a crucial dictionary for translating geometric properties into fluid mechanical properties:
+The first step leverages the \textbf{Fluid/Gravity Correspondence\cite{FluidGravity2005}}, which demonstrates that the dynamics of a gravitational bulk (a black hole spacetime) are dual to the dynamics of a viscous, incompressible fluid on a boundary (the stretched horizon) \cite{FluidGravity2005}. This duality provides a crucial dictionary for translating geometric properties into fluid mechanical properties:
 
 \begin{center}
 \begin{tabular}{|l|l|}
@@ -132,7 +132,7 @@ The standard Madelung transformation is used to define a spinor field $\psi(\mat
 where $H_0(\tau)=H_0(\tau)^\dagger$ is the Hermitian part, and the imaginary potential $V_I(\mathbf{x}, \tau)$ is proportional to the \textbf{viscous dissipation}.
 
 \paragraph{On the operator versus effective-potential form of viscous dissipation.}
-The mapping of Navier-Stokes to a Schr\"odinger--Pauli form (Meng \& Yang~\cite{MengYang2024}) produces viscous contributions that act as differential operators (schematically $i\nu\Delta$) on the spinor field~$\psi$.  In the present work we adopt a \emph{coarse-grained effective potential} representation,
+The mapping of Navier-Stokes to a Schr\"odinger--Pauli form produces viscous contributions that act as differential operators (schematically $i\nu\Delta$) on the spinor field~$\psi$.  In the present work we adopt a \emph{coarse-grained effective potential} representation,
 \begin{equation}
     V_I(\mathbf x,\tau)\;=\;\nu\,|\nabla\psi(\mathbf x,\tau)|^2,
 \end{equation}
@@ -318,7 +318,7 @@ Meng--Yang mapping suggests a \textbf{deep structural correspondence} between la
 spin alignment and horizon-scale rotational dissipation.
 
 \paragraph{The Stern--Gerlach effect.}
-In the classic Stern--Gerlach experiment \cite{SternGerlach1922}, silver atoms with 
+In the classic Stern--Gerlach experiment \cite{SternGerlach1924}, silver atoms with 
 magnetic moment $\mu$ pass through an inhomogeneous magnetic field $\mathbf{B}$. The 
 field exerts a torque on misaligned spins, causing them to precess and eventually align 
 along the field axis. This alignment is accompanied by energy dissipation: the transition 
@@ -407,7 +407,7 @@ by alignment, necessitating the opening of a Minkowski temporal channel.
 
 The monodromy obstruction manifests as dissipative power at multiple physical scales, 
 providing a quantitative bridge between quantum geometric stress and observable 
-thermal radiation. While the Stern--Gerlach analogyprovides the physical mechanism, the energy budget reveals the hierarchical structure 
+thermal radiation. While the Stern--Gerlach analogy provides the physical mechanism, the energy budget reveals the hierarchical structure 
 of the dissipation.
 
 \paragraph{Quantum versus thermal scales.}
@@ -666,7 +666,7 @@ incompatibility.
 \section{Operator--to--potential reduction and error estimate}
 \label{app:operator-to-potential}
 
-The Navier-Stokes to Schr\"odinger--Pauli mapping (Meng \& Yang~\cite{MengYang2024}) yields a viscous term that acts as the operator $i\nu\Delta$ on the spinor $\psi$.
+The Navier-Stokes to Schr\"odinger--Pauli mapping yields a viscous term that acts as the operator $i\nu\Delta$ on the spinor $\psi$.
 To motivate the effective multiplicative potential used in the main text, we compute the expectation value of this operator and establish when it can be represented locally by $i\nu|\nabla\psi|^2$ up to small corrections.
 
 \subsection*{Expectation value identity}
