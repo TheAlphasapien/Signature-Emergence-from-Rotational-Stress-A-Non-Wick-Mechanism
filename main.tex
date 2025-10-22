@@ -121,7 +121,7 @@ Angular momentum $J$ & Vorticity $\mathbf{\omega}$ \\
 
 In this context, the frame-dragging effect of the rotating Kerr black hole \cite{Kerr1963} is precisely mapped to the \textbf{vorticity} ($\mathbf{\omega} = \nabla \times \mathbf{u}$) of the dual fluid. This is the central link: gravitational rotation is mathematically equivalent to the fluid's viscous stress.
 
-\subsection{The Non-Hermitian Schr\"odinger--Pauli Mapping}
+\subsection{The Non-Hermitian Schr\"odinger--Pauli Mapping} \label{subsec:S_P_Map}
 
 The second tool is the \textbf{non-Hermitian quantum spin representation} of the Navier-Stokes (NS) equation, developed by Meng and Yang \cite{MengYang2024}. This mapping shows that the incompressible NS equations can be written as a two-component Schr\"odinger--Pauli Equation (SPE). This transformation is essential because it moves the problem from classical fluid dynamics into the language of quantum mechanics, where the condition of Hermiticity ($\hat{H} = \hat{H}^\dagger$) is directly tied to the fundamental physical requirement of energy conservation (unitarity).
 
@@ -176,7 +176,7 @@ This steady-state vorticity is the physical manifestation of the rotational stre
 \subsection{Explicit $V_I$ and Kerr-Scale Estimate}
 \label{subsec:VI-kerr}
 
-The final link uses the Meng \& Yang mapping (Section 2.2). The viscous dissipation ($\nu$) introduced by the vorticity $\mathbf{\omega}$ manifests in the Euclidean generator $H_E$ as the anti-Hermitian potential $iV_I(\mathbf{x}, \tau) = i\nu|\nabla\psi|^2$ (\autoref{subsec:VI-kerr}).
+The final link uses the Meng \& Yang mapping (\autoref{subsec:S_P_Map}). The viscous dissipation ($\nu$) introduced by the vorticity $\mathbf{\omega}$ manifests in the Euclidean generator $H_E$ as the anti-Hermitian potential $iV_I(\mathbf{x}, \tau) = i\nu|\nabla\psi|^2$ (\autoref{subsec:VI-kerr}).
 
 By estimating the spinor gradient $|\nabla\psi|^2$ in terms of the hydrodynamic velocity $\mathbf{u} \sim \Omega_H r_+$, we arrive at the Kerr-scale estimate for the anti-Hermitian potential:
 \begin{equation}\label{eq:VI_kerr}
@@ -710,18 +710,18 @@ In this sense the operator contributes locally an imaginary potential density $i
 
 \subsection*{Semiclassical reduction}
 Here $m^* = \rho$ denotes the effective inertial mass (fluid density) and $\hbar_{\text{eff}} = \nu$ the effective action scale (kinematic viscosity), as introduced in Section 2.2.
-Write $\psi=\sqrt{\rho}\,e^{iS/\hbar_{\mathrm{eff}}}$ with slowly varying amplitude $\rho$ and phase $S$.
+Write $\psi=\sqrt{\rho}\,e^{iS/\hbar_{\text{eff}}}$ with slowly varying amplitude $\rho$ and phase $S$.
 Then
 \[
 |\nabla\psi|^2
 = \tfrac{1}{4\rho}|\nabla\rho|^2
-+ \rho\,|\nabla S|^2/\hbar_{\mathrm{eff}}^2 .
++ \rho\,|\nabla S|^2/\hbar_{\text{eff}}^2 .
 \]
-If $|\nabla\rho|/\rho\ll|\nabla S|/\hbar_{\mathrm{eff}}$, the first term is negligible and
-$|\nabla\psi|^2\simeq \rho|\nabla S|^2/\hbar_{\mathrm{eff}}^2$.
+If $|\nabla\rho|/\rho\ll|\nabla S|/\hbar_{\text{eff}}$, the first term is negligible and
+$|\nabla\psi|^2\simeq \rho|\nabla S|^2/\hbar_{\text{eff}}^2$.
 The corresponding energy-density interpretation of the viscous operator becomes
 \begin{equation}
-    i\nu\Delta\psi \;\longrightarrow\; i\nu\,\frac{m^{*2}}{\hbar_{\mathrm{eff}}^2}\,\rho\,|\mathbf u|^2\,\psi ,
+    i\nu\Delta\psi \;\longrightarrow\; i\nu\,\frac{m^{*2}}{\hbar_{\text{eff}}^2}\,\rho\,|\mathbf u|^2\,\psi ,
 \end{equation}
 with $\mathbf u=\nabla S/m^*$, justifying the identification $V_I=\nu|\nabla\psi|^2$ used in the main text.
 
