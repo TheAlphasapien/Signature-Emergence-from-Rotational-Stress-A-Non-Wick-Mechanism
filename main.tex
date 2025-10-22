@@ -21,7 +21,7 @@
 \maketitle
 
 \begin{abstract}
-We propose a physical mechanism for the emergence of Minkowski signature from Euclidean geometry based on the incompatibility of rotation with closed time dimensions. Under explicit assumptions on the near-horizon fluid description and the effective non-Hermitian mapping of Navier–Stokes dynamics, we demonstrate that rotation introduces a time-averaged imaginary potential that violates Reflection Positivity, creating a Monodromy Obstruction. This obstruction prevents a smooth Euclidean thermal state and necessitates the opening of a non-compact temporal channel (Minkowski signature) to restore spectral stability. The Stern–Gerlach spin alignment process serves as an observable analogue, while recent mappings between Navier–Stokes equations and non-Hermitian quantum spin systems provide the mathematical framework. This work reframes the Euclidean regularity condition as a signal of the need for dissipative dynamics rather than a purely geometric artifact.
+We propose that rotational stress in viscous media can induce a transition in effective spacetime signature, yielding Minkowski-like causal structure without requiring analytic continuation (Wick rotation). This process, which we term \textbf{signature emergence}, reframes the metric signature not as a fixed geometric input, but as a dynamical consequence of internal stress and dissipation. By establishing an equivalence between the Euclidean regularity condition and the requirement for a non-compact temporal channel, we demonstrate that periodic Euclidean time, rotation, and smoothness cannot coexist. The Stern–Gerlach spin alignment process serves as a physical analog, while recent mappings between Navier–Stokes equations and non-Hermitian quantum spin systems provide the mathematical framework. We prove that rotation-induced non-Hermiticity violates Reflection Positivity, creating a Monodromy Obstruction that renders the Euclidean thermal state mathematically inconsistent and necessitates the emergence of Minkowski signature. This work also connects the difficulty of the Navier–Stokes Millennium Problem to foundational questions about spacetime structure. All quantities are expressed in geometric units.
 \end{abstract}
 
 \section{Introduction}
@@ -35,7 +35,7 @@ Historically, Wick rotation has been treated as a formal analytic continuation, 
 
 Several attempts have been made to endow Wick rotation with a more physical interpretation. For instance, Hartle and Hawking's ``no-boundary'' proposal~\cite{HartleHawking1983} uses a Euclidean path integral to define the wavefunction of the universe, suggesting that the Lorentzian signature emerges dynamically from a Euclidean regime. More recently, approaches in loop quantum gravity~\cite{BojowaladBrahma2016} and causal dynamical triangulations have explored signature change as a quantum gravitational phenomenon. Yet, these frameworks often rely on specific quantization schemes or boundary conditions, and do not directly address the role of internal stresses---such as rotation---in driving signature selection.
 
-A central challenge in interpreting the Wick rotation physically is identifying the appropriate degrees of freedom that encode the thermal and dynamical properties of spacetime. In the context of black hole thermodynamics, the \textbf{membrane paradigm} ~\cite{MembraneParadigm1986} offers a compelling framework: it models the black hole horizon as a fictitious, timelike surface endowed with fluid-like properties, including viscosity, conductivity, and vorticity. This \textbf{stretched horizon} serves as a natural boundary where gravitational dynamics project onto an effective \textbf{dissipative fluid system}, as formalized in the \textbf{Fluid/Gravity correspondence}~\cite{FluidGravity2005}.
+A central challenge in interpreting the Wick rotation physically is identifying the appropriate degrees of freedom that encode the thermal and dynamical properties of spacetime while also providing a physical meaning for the Euclidean regime it rotates into. Without a mechanism for continuation, Euclidean spacetime remains a formal construct, disconnected from the dissipative dynamics it is meant to encode. Black hole thermodynamics's \textbf{membrane paradigm} ~\cite{MembraneParadigm1986} offers a compelling framework: it models the black hole horizon as a fictitious, timelike surface endowed with fluid-like properties, including viscosity, conductivity, and vorticity. This \textbf{stretched horizon} serves as a natural boundary where gravitational dynamics project onto an effective \textbf{dissipative fluid system}, as formalized in the \textbf{Fluid/Gravity correspondence}~\cite{FluidGravity2005}.
 
 This boundary-centric viewpoint is particularly well-suited for analyzing the Euclidean continuation of black hole spacetimes. The \textbf{Euclidean Kerr geometry}, for instance, imposes a periodicity in imaginary time to avoid conical singularities at the horizon~\cite{GibbonsHawking1977}. However, when rotation is present, the frame-dragging effect entangles temporal and angular coordinates, introducing \textbf{vorticity} in the dual fluid. This vorticity, in turn, acts as an effective magnetic field in the \textbf{non-Hermitian Schr\"odinger--Pauli mapping} of the Navier--Stokes equations~\cite{MengYang2024}, leading to a \textbf{Stern--Gerlach--like spin alignment process}.
 
@@ -136,7 +136,10 @@ The mapping of Navier-Stokes to a Schr\"odinger--Pauli form produces viscous con
 \begin{equation}
     V_I(\mathbf x,\tau)\;=\;\nu\,|\nabla\psi(\mathbf x,\tau)|^2,
 \end{equation}
-which captures the dominant local phase contribution of the full operator in the hydrodynamic or semiclassical regime.  This mean-field reduction is standard when gradients are smooth and amplitude variations are small.  Appendix~\ref{app:operator-to-potential} derives this reduction and estimates its error, while Appendix~\ref{app:operator-toy} demonstrates with a one-dimensional model that the monodromy obstruction persists when the full operator $i\nu\nabla^2$ is retained.  Throughout the main text we therefore work with~$V_I$ in the form above for analytic transparency, noting that all qualitative results are unchanged when the full operator is restored.
+which captures the dominant local phase contribution of the full operator in the hydrodynamic or semiclassical regime.  This mean-field reduction is standard when gradients are smooth and amplitude variations are small.  
+In geometric units ($c = G = \hbar = 1$), the kinematic viscosity $\nu$ carries dimensions $[L^2/T]$ while $|\nabla\psi|^2$ has dimensions $[1/L^2]$, ensuring that $V_I$ has dimensions $[1/T]$ consistent with an energy-rate contribution to the Euclidean generator $H_E$ (complete dimensional analysis in Appendix~\ref{app:dimensional-analysis}). 
+Throughout, we work with fields satisfying vanishing boundary conditions at spatial infinity (Dirichlet), ensuring that the Hermitian part $H_0$ is properly self-adjoint and that all non-Hermitian contributions arise solely from the viscous dissipation term $iV_I$.
+Appendix~\ref{app:operator-to-potential} derives the equation's reduction and estimates its error, while Appendix~\ref{app:operator-toy} demonstrates with a one-dimensional model that the monodromy obstruction persists when the full operator $i\nu\nabla^2$ is retained.  Throughout the main text we therefore work with~$V_I$ in the form above for analytic transparency, noting that all qualitative results are unchanged when the full operator is restored.
 
 
 For a rotating black hole:
@@ -219,6 +222,13 @@ The Monodromy Obstruction arises because the anti-Hermitian component $iV_I(\tau
 Assuming for simplicity a constant-in-$\tau$ approximation where $H_E(\tau) \approx H_E$, the Monodromy operator simplifies to $\mathcal{M} = e^{-\beta H_E}$. If $H_E$ has eigenvalues $\lambda_n = \epsilon_n + i v_n$, then the Monodromy operator has eigenvalues $m_n = e^{-\beta \lambda_n} = e^{-\beta \epsilon_n} e^{-i \beta v_n}$.
 
 For reflection positivity to hold, the eigenvalues $m_n$ must be real and positive, which requires the imaginary phase to vanish: $e^{-i\beta v_n}=1$, implying $\beta v_n \in 2\pi\mathbb Z$ for all eigenstates. Since the imaginary component $v_n$ is directly related to the non-zero viscous dissipation $V_I$ (which is spatially varying and generically non-quantized), this condition is almost always \textbf{impossible to satisfy simultaneously} for a rotating system.
+
+\paragraph{Phase mismatch and non-trivial monodromy.}
+The failure of periodicity can be quantified by the phase mismatch accumulated over one Euclidean cycle:
+\begin{equation}\label{eq:phase_mismatch}
+\Delta\phi_n \equiv \beta v_n \mod 2\pi
+\end{equation}
+We define a monodromy as \textbf{non-trivial} when $\Delta\phi_n \neq 0$ for at least one normalizable eigenstate, indicating that the Euclidean evolution fails to return the state to its initial phase after one period. For a rotating system with generic (non-quantized) viscous dissipation $V_I$, the condition $\Delta\phi_n = 0$ for all $n$ is impossible to satisfy, yielding non-trivial monodromy and the breakdown of reflection positivity.
 
 From the representation--theoretic standpoint, this breakdown can be understood in the language
 of reflection--positive semigroups~\cite{NeebOlafsson2018}.
@@ -304,6 +314,9 @@ Under the \(\tau\)-dependent unitary/gauge transform \(U(\tau)=e^{-i\chi(\tau)}\
 H_E \mapsto H_E' = U H_E U^{-1} - i(\partial_\tau U)U^{-1} .
 \]
 Writing \(U=e^{-i\chi}\) and expanding gives the shift of the anti-Hermitian piece by \(-i\partial_\tau\chi\) plus commutators with \(H_0\). If \(V_I\) equals \(\partial_\tau\chi\) up to such commutators (and \(U\) is single-valued on the thermal circle so that \(U(\beta)=U(0)\)), the net monodromy is rendered positive.
+
+\paragraph{Equivalence of gauge and monodromy obstructions.}
+The gauge-removability condition $\int_0^\beta V_I(\mathbf{x},\tau) d\tau = 0$ and the monodromy obstruction are mathematically equivalent perspectives on the same physical fact. For the gauge transformation $\psi \to e^{-i\chi(\tau)}\psi$ to remove $V_I$ while preserving periodicity, $\chi$ must be single-valued: $\chi(\beta, \mathbf{x}) = \chi(0, \mathbf{x}) \mod 2\pi$ for all $\mathbf{x}$. This is precisely the condition that prevents complex phases in the monodromy eigenvalues $e^{-i\beta v_n}$. When $V_I(\mathbf{x},\tau)$ is spatially inhomogeneous with $\int_0^\beta V_I d\tau \neq 0$, both obstructions manifest: the Hamiltonian $H_E = H_0 + iV_I$ remains non-Hermitian under any admissible gauge transformation, and $\mathcal{M}$ acquires non-trivial complex phases. This structure is analogous to the Berry phase condition in cyclic non-Hermitian quantum systems, where geometric phases arising from adiabatic evolution around closed loops in parameter space cannot be removed by gauge transformations when certain topological conditions are violated~\cite{WilczekZee1984}. This establishes that rotation-induced dissipation is intrinsic to the physical system, not a representational artifact.
 
 \paragraph{When the gauge trick fails.}
 The gauge removal is only possible when \(V_I\) is (i) gauge-exact in \(\tau\) or (ii) proportional to a global conserved charge \(Q\) commuting with \(H_0\) (so \(V_I(\tau)=\mu(\tau)Q\) and \(\chi(\tau)=\big(\int^\tau \mu\big)Q\)). In contrast, the viscous term obtained from the Meng--Yang mapping, \(V_I(\mathbf x,\tau)=\nu|\nabla\psi|^2\), is generically a spatially varying multiplicative potential which is not of the global conserved-charge form. Any attempt to choose a spatially dependent \(\chi(\tau,\mathbf x)\) faces the single-valuedness requirement \(e^{-i\chi(\beta,\mathbf x)}=e^{-i\chi(0,\mathbf x)}\) for all \(\mathbf x\); this cannot be satisfied globally in a smooth way for a generic inhomogeneous profile unless singular gauge transitions or pathological topological decompositions are permitted. Therefore the imaginary potential sourced by viscous vorticity is generically \emph{not} gauge-removable, and the monodromy obstruction described above is robust.
@@ -555,7 +568,7 @@ derivable feature rather than an input assumption.
 
 The complex eigenvalue spiral of
 \[
-\mathcal{M} = e^{-\beta (1 - i\nu) H_E}
+\mathcal{M} = e^{-\beta(1-i\nu)H_E}
 \]
 illustrates the spectral imprint of the Monodromy Obstruction.
 
@@ -569,13 +582,11 @@ illustrates the spectral imprint of the Monodromy Obstruction.
     \label{fig:monodromy_spiral}
 \end{figure}
 
-For a real, positive Euclidean spectrum \(E_n\), the eigenvalues
-\(\Lambda_n = e^{-\beta(1 - i\nu)E_n}\)
-trace a logarithmic path in the complex plane, encoding the simultaneous presence of Euclidean damping (\(e^{-\beta E_n}\)) and Lorentzian phase rotation (\(e^{i\beta\nu E_n}\)).
-This spiral geometry visualizes the loss of reflection positivity: as rotational stress introduces an imaginary component to the Euclidean propagator, eigenvalues acquire nonzero phase and wind toward the origin rather than remaining on the positive real axis.
-The result is a \emph{spectral signature of non-Hermiticity}, equivalent to the analytic obstruction that forbids a smooth, periodic Euclidean thermal state in the rotating case.
-In physical terms, the inward winding represents dissipative decay, while the angular advance corresponds to the emergent Minkowski channel that resolves the compact-time incompatibility.
-The monodromy spiral therefore provides a direct spectral visualization of signature emergence—the transition from real (Euclidean) eigenvalues to complex (Lorentzian) spectra under rotation.
+For a real, positive Euclidean spectrum $E_n$, the eigenvalues $\Lambda_n = e^{-\beta(1-i\nu)E_n}$ trace a logarithmic path in the complex plane, encoding the simultaneous presence of Euclidean damping ($e^{-\beta E_n}$) and Lorentzian phase rotation ($e^{i\beta\nu E_n}$). This spiral geometry visualizes the loss of reflection positivity: as rotational stress introduces an imaginary component to the Euclidean propagator, eigenvalues acquire nonzero phase and wind toward the origin rather than remaining on the positive real axis.
+
+The spiral represents a continuous interpolation between purely Euclidean thermal weighting ($\nu = 0$, eigenvalues on the positive real axis) and Lorentzian unitary evolution ($\nu \to \infty$, eigenvalues approaching the unit circle). The mixed regime with finite $\nu$ yields a \textbf{non-trivial monodromy}: eigenvalues do not return to their initial positions after a full $2\pi$ phase advance in complex time, signifying branch structure in the analytic continuation of the propagator. This winding is analogous to the monodromy around Euclidean black hole instantons and represents the geometric signature of the Euclidean-to-Minkowski transition.
+
+In the fluid/gravity correspondence, the spiral reflects the complex relaxation spectrum of the non-Hermitian Navier-Stokes operator, directly analogous to black hole quasinormal mode frequencies in the complex plane. The inward winding represents dissipative decay, while the angular advance corresponds to the emergent Minkowski channel that resolves the compact-time incompatibility. The monodromy spiral therefore provides a direct spectral visualization of signature emergence—the transition from real (Euclidean) eigenvalues to complex (Lorentzian) spectra under rotation.
 
 
 \subsection{Implications}
@@ -691,13 +702,14 @@ For square-integrable $\psi$ on a spatial domain~$V$ with suitable boundary cond
        = -i\nu \!\int_V |\nabla\psi|^2 d^3x
        + i\nu \!\oint_{\partial V} \psi^* \nabla\psi\!\cdot\! d\mathbf S .
 \end{align}
-If the boundary term vanishes (periodic or no-flux boundaries, or coarse-graining over scales much smaller than the domain), then
+The surface integral vanishes under Dirichlet boundary conditions ($\psi = 0$ at $\partial V$) or for periodic/no-flux boundaries, ensuring that
 \begin{equation}
     \langle i\nu\Delta \rangle \;\approx\; -\,i\nu \!\int_V |\nabla\psi|^2 d^3x .
 \end{equation}
 In this sense the operator contributes locally an imaginary potential density $i\nu|\nabla\psi|^2$ to leading order.
 
 \subsection*{Semiclassical reduction}
+Here $m^* = \rho$ denotes the effective inertial mass (fluid density) and $\hbar_{\text{eff}} = \nu$ the effective action scale (kinematic viscosity), as introduced in Section 2.2.
 Write $\psi=\sqrt{\rho}\,e^{iS/\hbar_{\mathrm{eff}}}$ with slowly varying amplitude $\rho$ and phase $S$.
 Then
 \[
@@ -716,7 +728,7 @@ with $\mathbf u=\nabla S/m^*$, justifying the identification $V_I=\nu|\nabla\psi
 \subsection*{Error estimate}
 Let the coarse-graining scale be $\ell_{\mathrm{c}}$ and the typical variation scale of $\psi$ be $L\gg\ell_{\mathrm{c}}$.
 Integrating by parts twice shows that neglected boundary and higher-derivative terms are suppressed by $(\ell_{\mathrm{c}}/L)^2$.
-Defining $\varepsilon=(\ell_{\mathrm{c}}/L)^2$, the spectral phase shift due to these terms enters the monodromy operator $\mathcal M=e^{-\beta(H_0+iV_I)}$ only at $O(\varepsilon)$.
+Defining $\varepsilon=(\ell_{\mathrm{c}}/L)^2$ as the ratio of dissipation to system scale, the spectral phase shift due to these terms enters the monodromy operator $\mathcal M=e^{-\beta(H_0+iV_I)}$ only at $O(\varepsilon)$.
 Hence the replacement of $i\nu\Delta$ by $i\nu|\nabla\psi|^2$ introduces at most small, controllable corrections that do not affect the existence or absence of reflection positivity.
 
 \section{Toy operator model: persistence of the monodromy obstruction}
@@ -747,6 +759,8 @@ The Euclidean monodromy over one period $\beta$ is $\mathcal M = e^{-\beta H_E}$
               = e^{-\beta(E_n)} e^{-i\beta\nu k_n^2}.
 \]
 The second factor produces complex phases unless $\beta\nu k_n^2\in2\pi\mathbb Z$ for all $n$, which is generically impossible.  Therefore $\mathcal M$ is not positive and fails reflection positivity.
+
+The eigenvalues trace a logarithmic spiral in the complex plane (shown in Figure~\ref{fig:monodromy_spiral}), with the inward winding representing Euclidean damping $e^{-\beta E_n}$ and the angular advance representing the non-Hermitian phase $e^{-i\beta\nu k_n^2}$. This spiral geometry confirms that no real, positive spectrum can be recovered, demonstrating that the Euclidean state space is not self-adjoint under rotation.
 
 \subsection*{Numerical illustration}
 For representative parameters ($L\!=\!1$, $\nu\!=\!0.1$, $\beta\!=\!10$) the eigenvalues $\Lambda_n$ lie on a logarithmic spiral in the complex plane with argument $-\beta\nu k_n^2$, confirming loss of positivity.
@@ -1280,7 +1294,7 @@ This provides the formal connection between:
 
 All four are different descriptions of the same requirement.
 
-\subsection{Dimensional Analysis and Physical Units}
+\subsection{Dimensional Analysis and Physical Units} \label{app:dimensional-analysis}
 
 The Meng-Yang mapping introduces effective quantum parameters that require careful dimensional tracking:
 \begin{itemize}
