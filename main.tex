@@ -12,7 +12,7 @@
 \newtheorem{remark}{Remark}
 
 \title{Signature Emergence from Rotational Stress: A Non-Wick Mechanism}
-\author{Adam Morgan\\
+\author{Adam Kevin Morgan\\
 \small Unaffiliated}
 \date{\today}
 
@@ -29,11 +29,11 @@ We propose that rotational stress in viscous media can induce a transition in ef
 
 \subsection{The Ontological Problem of Wick Rotation}
 
-The Wick rotation $(t \to i\tau)$ is a ubiquitous tool in quantum field theory and statistical mechanics. It facilitates the convergence of path integrals, simplifies calculations by mapping Lorentzian spacetimes to Euclidean ones, and underpins the thermal interpretation of black hole horizons via the Gibbons--Hawking procedure. Despite its computational utility, the physical meaning of Wick rotation remains elusive.
+The Wick rotation $(t \to i\tau)$ is a ubiquitous tool \footnote{Throughout this work, $\tau$ denotes Euclidean (imaginary) time with periodicity $\beta = 1/T_H$, while $t$ denotes Lorentzian (real) time after signature transition. Greek indices $\mu, \nu$ run over spacetime coordinates; Latin indices $i,j$ over spatial coordinates only.} in quantum field theory and statistical mechanics. It facilitates the convergence of path integrals, simplifies calculations by mapping Lorentzian spacetimes to Euclidean ones, and underpins the thermal interpretation of black hole horizons via the Gibbons--Hawking procedure. Despite its computational utility, the physical meaning of Wick rotation remains elusive.
 
 Historically, Wick rotation has been treated as a formal analytic continuation, justified by the assumption that the underlying theory admits a well-defined Euclidean counterpart. The Osterwalder--Schrader axioms formalize the conditions under which such a continuation yields a unitary Lorentzian quantum field theory, with reflection positivity playing a central role. However, these axioms are mathematical constraints rather than physical derivations, and they do not explain why nature selects a Lorentzian signature in the first place.
 
-Several attempts have been made to endow Wick rotation with a more physical interpretation. For instance, Hartle and Hawking's ``no-boundary'' proposal~\cite{HartleHawking1983} uses a Euclidean path integral to define the wavefunction of the universe, suggesting that the Lorentzian signature emerges dynamically from a Euclidean regime. More recently, approaches in loop quantum gravity~\cite{BojowaladBrahma2016} and causal dynamical triangulations have explored signature change as a quantum gravitational phenomenon. Yet, these frameworks often rely on specific quantization schemes or boundary conditions, and do not directly address the role of internal stresses---such as rotation---in driving signature selection.
+Several attempts have been made to endow Wick rotation with a more physical interpretation. For instance, Hartle and Hawking's ``no-boundary'' proposal~\cite{HartleHawking1983} uses a Euclidean path integral to define the wavefunction of the universe, suggesting that the Lorentzian signature emerges dynamically from a Euclidean regime. More recently, approaches in loop quantum gravity~\cite{BojowaladBrahma2016} and causal dynamical triangulations have explored signature change as a quantum gravitational phenomenon. Yet, these frameworks often rely on specific quantization schemes or boundary conditions, and do not directly address the role of internal stresses---such as rotation---in driving signature selection. If signature selection can be shown to emerge from physical dynamics rather than being imposed as a fundamental input, it suggests that the Euclidean and Lorentzian descriptions are not ontologically distinct regimes but rather complementary perspectives on a unified underlying structure. This reframing has profound implications for quantum gravity, where the relationship between Euclidean path integrals and Lorentzian evolution remains conceptually opaque.
 
 A central challenge in interpreting the Wick rotation physically is identifying the appropriate degrees of freedom that encode the thermal and dynamical properties of spacetime while also providing a physical meaning for the Euclidean regime it rotates into. Without a mechanism for continuation, Euclidean spacetime remains a formal construct, disconnected from the dissipative dynamics it is meant to encode. Black hole thermodynamics's \textbf{membrane paradigm} ~\cite{MembraneParadigm1986} offers a compelling framework: it models the black hole horizon as a fictitious, timelike surface endowed with fluid-like properties, including viscosity, conductivity, and vorticity. This \textbf{stretched horizon} serves as a natural boundary where gravitational dynamics project onto an effective \textbf{dissipative fluid system}, as formalized in the \textbf{Fluid/Gravity correspondence}~\cite{FluidGravity2005}.
 
@@ -41,35 +41,17 @@ This boundary-centric viewpoint is particularly well-suited for analyzing the Eu
 
 The \textbf{boundary fluid} thus becomes the stage where the incompatibility between rotation and Euclidean periodicity is most transparently realized. By focusing on this boundary, we gain access to a \textbf{quantum mechanical description} of dissipation and stress, enabling a precise analysis of how rotational dynamics obstruct the existence of a smooth Euclidean thermal state. This motivates our central claim: that the \textbf{signature of spacetime is not a fixed input}, but an \textbf{emergent feature} dictated by the \textbf{spectral stability of the boundary dynamics}.
 
-\textbf{Key Questions:}
-\begin{enumerate}
-  \item What does ``imaginary time'' mean physically?
-  \item Why does the Wick rotation work?
-  \item Can signature selection be derived from physical principles, rather than imposed as a mathematical convenience?
-\end{enumerate}
+\subsection{Physical and Mathematical Foundations}
 
-\subsection{Established Results}
+The mechanism we propose synthesizes three established theoretical frameworks, each contributing an essential piece of the physical picture.
 
-\paragraph{From Black Hole Thermodynamics (Gibbons-Hawking\cite{GibbonsHawking1977}):}
-\begin{itemize}
-\item The Euclidean Kerr metric\cite{Kerr1963} has a conical singularity at the horizon
-\item Regularity requires $\tau$-periodicity: $\beta = 4\pi/\kappa = 1/T_H$
-\item This determines Hawking temperature
-\end{itemize}
+The \textbf{fluid/gravity correspondence}~\cite{FluidGravity2005,MembraneParadigm1986} establishes that black hole horizon dynamics can be precisely mapped to viscous fluid flow on a stretched horizon membrane. This duality provides a dictionary relating geometric properties of the spacetime—such as frame-dragging ($g_{t\phi}$), surface gravity ($\kappa$), and angular momentum ($J$)—to hydrodynamic variables including fluid velocity ($\mathbf{u}$), temperature ($T_H$), and vorticity ($\boldsymbol{\omega} = \nabla \times \mathbf{u}$). For a rotating Kerr black hole, the frame-dragging effect manifests in the fluid dual as rotational vorticity, making rotation a fundamentally hydrodynamic phenomenon at the horizon scale.
 
-\paragraph{From Fluid/Gravity Correspondence\cite{FluidGravity2005}:}
-\begin{itemize}
-\item Black hole horizons map to viscous fluid dynamics
-\item Kerr rotation induces vorticity in the dual fluid
-\item Navier-Stokes\cite{NavierStokesMillennium} (NS) equations govern near-horizon dynamics
-\end{itemize}
+Within this hydrodynamic description, \textbf{Meng \& Yang's mapping}~\cite{MengYang2024} demonstrates that the incompressible Navier-Stokes equations can be recast in Schrödinger-Pauli form through a Madelung transformation. Crucially, this mapping reveals that viscous dissipation—unavoidable in any rotating fluid—introduces an imaginary potential $V_I \sim \nu|\nabla\psi|^2$ into the effective quantum Hamiltonian. This term encodes the irreversible energy dissipation associated with rotational stress, manifesting as a non-Hermitian contribution to the Euclidean evolution operator.
 
-\paragraph{Recent Development (Meng \& Yang 2024):}
-\begin{itemize}
-\item NS equations map to non-Hermitian Schr\"odinger-Pauli equation
-\item Mapping includes ``Stern-Gerlach\cite{SternGerlach1924} term'' $\sigma \cdot B$
-\item Classical fluid interpreted as quantum spin system with imaginary diffusion
-\end{itemize}
+The mathematical criterion for consistency of this framework is provided by the \textbf{Osterwalder-Schrader reflection positivity condition}~\cite{OsterwalderSchrader1973,NeebOlafsson2018}. Reflection positivity ensures that correlation functions in Euclidean field theory define positive-definite inner products, which is the necessary and sufficient condition for analytic continuation to a unitary Lorentzian quantum theory. When reflection positivity is violated—as occurs when the Euclidean evolution operator acquires complex eigenvalues—the smooth, periodic Euclidean manifold becomes mathematically inconsistent as a thermal state, and alternative geometric structures must emerge.
+
+These three ingredients combine to reveal a physical obstruction: rotation induces vorticity, vorticity generates viscous dissipation, dissipation produces non-Hermitian dynamics, and non-Hermiticity violates reflection positivity. The Euclidean thermal description therefore fails for any rotating black hole, necessitating the emergence of Minkowski signature as the unique physical resolution to this geometric incompatibility.
 \subsection{The Challenge of Rotational Stress}
 
 The established thermal interpretation of Euclidean gravity, as exemplified by the Gibbons--Hawking calculation, depends fundamentally on a smooth, static manifold where the Euclidean time $\tau$ is periodic and unmixed with spatial coordinates \cite{GibbonsHawking1977}.
@@ -83,24 +65,18 @@ If a rotating black hole must settle into a smooth thermal state with period $\b
 \]
 To explore the mathematical nature of this constraint, we require a framework that can precisely link gravitational rotation to quantum dissipation. The key to our approach is the non-Hermitian representation of fluid dynamics.
 
-\subsection{This Work}
+\subsection*{This Work}
 
-We demonstrate that the incompatibility of rotation with closed Euclidean time is not merely a conceptual analogy but a \textbf{robust mathematical necessity} for signature selection. This work makes the following contributions:
+This paper reframes signature selection as a \textbf{dynamical consequence of rotational stress} rather than a fixed geometric input. Our approach synthesizes fluid/gravity duality, non-Hermitian quantum mappings, and reflection-positivity criteria to establish a physical mechanism for signature emergence. The argument proceeds in four stages, each developed in subsequent sections:
 
-\begin{enumerate}
-    \item \textbf{Non-Hermitian Source Term:} We utilize the Meng \& Yang Navier–Stokes $\to$ Schr\"odinger–Pauli Equation (SPE) mapping \cite{MengYang2024} to show that the rotation-induced vorticity of the dual Kerr boundary fluid introduces a \textbf{physical anti-Hermitian imaginary potential} $iV_I(\mathbf{x}, \tau)$ into the Euclidean generator $H_E(\tau)$ (\autoref{subsec:VI-kerr}). We compute the scaling of this potential to be proportional to $\nu(\Omega_H r_+)^2$ for the Kerr geometry, proving $\overline{V_I} \neq 0$ (\autoref{subsec:VI-kerr}, \autoref{subsec:vorticity-dual}).
+\begin{itemize}
+    \item \textbf{Non-Hermitian Source Term (Section~\ref{sec:source-term}):} Using the Navier–Stokes $\rightarrow$ Schrödinger–Pauli mapping, we show that rotational vorticity in the Kerr horizon fluid introduces an anti-Hermitian potential $iV_I(x,\tau)$ into the Euclidean generator $H_E(\tau)$, encoding viscous dissipation.
+    \item \textbf{Monodromy Obstruction (Section~\ref{sec:monodromy}):} We prove that any non-zero, non-removable $V_I$ drives complex phases in the Euclidean monodromy operator, violating Osterwalder–Schrader reflection positivity. This demonstrates that a smooth, periodic Euclidean thermal state is mathematically inconsistent for rotating systems.
+    \item \textbf{Gauge Robustness (Section~\ref{subsec:gauge-removability}):} We establish that $V_I$ cannot be eliminated by any smooth, single-valued gauge transformation on the thermal circle, confirming that the obstruction is physical rather than representational.
+    \item \textbf{Physical Interpretation (Section~\ref{sec:physical-interpretation}):} We connect the mathematical obstruction to a Stern–Gerlach–type alignment process, showing that rotational stress requires a dissipative channel. The signature flip to Minkowski provides this outlet, resolving the incompatibility between rotation and compact time.
+\end{itemize}
 
-   \item \textbf{The Monodromy Obstruction Theorem:} We prove that a non-zero, non-removable time-averaged imaginary potential $\overline{V_I}$ leads to \textbf{complex-phased eigenvalues} in the Monodromy operator $\mathcal{M}$ (\autoref{subsec:monodromy-rp}). This violates \textbf{Reflection Positivity\cite{OsterwalderSchrader1973}} and formally demonstrates that the smooth, periodic Euclidean thermal state for a rotating black hole is \textbf{mathematically inconsistent} (\autoref{subsec:monodromy-rp}).
-
-   Reflection positivity, originally formulated in the Osterwalder--Schrader axioms as the key criterion enabling analytic continuation from Euclidean to Lorentzian quantum field theory, has since been given a precise representation--theoretic formulation~\cite{NeebOlafsson2018}.  In this framework, a Euclidean theory admits a Lorentzian counterpart only if its correlation functions define a reflection positive representation of the underlying symmetry group.
-
-    \item \textbf{Gauge Robustness:} We preemptively address the objection that $iV_I$ could be a gauge artifact, proving that the spatially-dependent viscous term $V_I(\mathbf{x}, \tau) = \nu|\nabla\psi|^2$ is \textbf{not gauge-removable} by a smooth, single-valued periodic transformation $\chi(\tau)$ (\autoref{subsec:gauge-removability}). This establishes the robustness of the obstruction.
-
-    \item \textbf{Physical Interpretation:} The only physically consistent resolution to this Monodromy Obstruction is the emergence of a \textbf{Minkowski temporal channel} (the signature flip) that provides a non-compact, dissipative outlet for the rotational stress, thereby resolving the spectral instability (\autoref{subsec:ns-spinor-mapping}). This establishes the Euclidean regularity condition $\beta = 4\pi/\kappa$ \cite{GibbonsHawking1977} as a \textbf{mathematical fingerprint} of the required Minkowski dynamics.
-\end{enumerate}
-\section{The Non-Wick Toolset: Fluid Dynamics as a Quantum Dissipator}
-
-To formally establish the mathematical incompatibility between rotational stress and Euclidean periodicity, we employ a two-step framework that connects general relativity to non-Hermitian quantum mechanics.
+Together, these results demonstrate that the Euclidean-to-Minkowski transition is not an analytic convenience but a physically necessary resolution to a geometric constraint. The subsequent sections formalize this claim through spectral analysis, gauge arguments, and physical analogies.
 
 \subsection{The Fluid/Gravity Correspondence\cite{FluidGravity2005}}
 
@@ -137,6 +113,7 @@ The mapping of Navier-Stokes to a Schr\"odinger--Pauli form produces viscous con
     V_I(\mathbf x,\tau)\;=\;\nu\,|\nabla\psi(\mathbf x,\tau)|^2,
 \end{equation}
 which captures the dominant local phase contribution of the full operator in the hydrodynamic or semiclassical regime.  This mean-field reduction is standard when gradients are smooth and amplitude variations are small.  
+
 In geometric units ($c = G = \hbar = 1$), the kinematic viscosity $\nu$ carries dimensions $[L^2/T]$ while $|\nabla\psi|^2$ has dimensions $[1/L^2]$, ensuring that $V_I$ has dimensions $[1/T]$ consistent with an energy-rate contribution to the Euclidean generator $H_E$ (complete dimensional analysis in Appendix~\ref{app:dimensional-analysis}). 
 Throughout, we work with fields satisfying vanishing boundary conditions at spatial infinity (Dirichlet), ensuring that the Hermitian part $H_0$ is properly self-adjoint and that all non-Hermitian contributions arise solely from the viscous dissipation term $iV_I$.
 Appendix~\ref{app:operator-to-potential} derives the equation's reduction and estimates its error, while Appendix~\ref{app:operator-toy} demonstrates with a one-dimensional model that the monodromy obstruction persists when the full operator $i\nu\nabla^2$ is retained.  Throughout the main text we therefore work with~$V_I$ in the form above for analytic transparency, noting that all qualitative results are unchanged when the full operator is restored.
@@ -151,7 +128,7 @@ For a rotating black hole:
 Our subsequent analysis focuses on proving that this non-zero, anti-Hermitian potential $iV_I$, sourced by rotation, fundamentally breaks the conditions required for a smooth Euclidean partition function.
 
 \section{Kerr Geometry, Vorticity, and the Dissipative Source $V_I$}
-
+\label{sec:source-term} 
 \subsection{Euclidean Kerr and the Conical Constraint}
 
 The standard procedure for relating the gravitational action to thermodynamics involves Wick-rotating the Kerr metric\cite{Kerr1963} and compactifying the time coordinate $t \to i\tau$ \cite{GibbonsHawking1977}. The near-horizon expansion of the Euclidean Kerr metric\cite{Kerr1963} contains two essential features (\autoref{subsec:eucl-kerr-nh}):
@@ -180,13 +157,13 @@ The final link uses the Meng \& Yang mapping (\autoref{subsec:S_P_Map}). The vis
 
 By estimating the spinor gradient $|\nabla\psi|^2$ in terms of the hydrodynamic velocity $\mathbf{u} \sim \Omega_H r_+$, we arrive at the Kerr-scale estimate for the anti-Hermitian potential:
 \begin{equation}\label{eq:VI_kerr}
-    \overline{V_I} \approx \nu\,\frac{m^2}{\hbar^2}\,\rho\,(\Omega_H r_+)^2
+    \overline{V_I} \approx \nu\,\rho\,(\Omega_H r_+)^2
 \end{equation}
 Since $\nu$, $\rho$, and the rotation $\Omega_H$ are all non-zero for a rotating black hole, the time average of the anti-Hermitian potential is \textbf{non-zero and constant} over the period $\beta$: $\overline{V_I} \neq 0$. This non-zero constant $\overline{V_I}$ is the key quantitative input for the formal Monodromy Obstruction proof.
 
-\section{The Monodromy Obstruction to Reflection Positivity}
+\section{The Monodromy Obstruction to Reflection Positivity} \label{sec:monodromy}
 
-The central claim of this work is that the non-zero rotational stress, quantified by $\overline{V_I} \neq 0$ (Eq. \ref{eq:VI_kerr}), creates a fundamental inconsistency in the Euclidean partition function, forcing the system out of the Euclidean signature. This inconsistency is formally proven by the failure of the Monodromy operator to satisfy Reflection Positivity\cite{OsterwalderSchrader1973}.
+The central claim of this work is that the non-zero rotational stress, quantified by $\overline{V_I} \neq 0$ (Eq. \ref{eq:VI_kerr}), creates a fundamental inconsistency in the Euclidean partition function, forcing the system out of the Euclidean signature. This inconsistency is formally proven by the Monodromy operator's violation of Reflection Positivity\cite{OsterwalderSchrader1973}.
 
 \subsection{The Monodromy Operator and Reflection Positivity}
 \label{subsec:monodromy-rp}
@@ -211,7 +188,7 @@ Let $H_E(\tau)=H_0(\tau)+iV_I(\tau)$ with $H_0(\tau)=H_0(\tau)^\dagger$ and real
 If the time-averaged imaginary part of the spectrum is nonzero in the sense that the monodromy
 $\mathcal{M}=\mathcal{T}\exp\!\left(-\int_0^\beta H_E(\tau)\,d\tau\right)$ acquires phases
 $e^{-i\beta v_n}$ with generic $v_n\notin\frac{2\pi}{\beta}\mathbb{Z}$, then $\mathcal{M}$ is not a
-positive operator and Reflection Positivity fails.
+positive operator and violates Reflection Positivity (cf. OS2).
 \end{lemma}
 
 \subsection{The Role of Non-Zero Dissipation}
@@ -321,7 +298,7 @@ The gauge-removability condition $\int_0^\beta V_I(\mathbf{x},\tau) d\tau = 0$ a
 \paragraph{When the gauge trick fails.}
 The gauge removal is only possible when \(V_I\) is (i) gauge-exact in \(\tau\) or (ii) proportional to a global conserved charge \(Q\) commuting with \(H_0\) (so \(V_I(\tau)=\mu(\tau)Q\) and \(\chi(\tau)=\big(\int^\tau \mu\big)Q\)). In contrast, the viscous term obtained from the Meng--Yang mapping, \(V_I(\mathbf x,\tau)=\nu|\nabla\psi|^2\), is generically a spatially varying multiplicative potential which is not of the global conserved-charge form. Any attempt to choose a spatially dependent \(\chi(\tau,\mathbf x)\) faces the single-valuedness requirement \(e^{-i\chi(\beta,\mathbf x)}=e^{-i\chi(0,\mathbf x)}\) for all \(\mathbf x\); this cannot be satisfied globally in a smooth way for a generic inhomogeneous profile unless singular gauge transitions or pathological topological decompositions are permitted. Therefore the imaginary potential sourced by viscous vorticity is generically \emph{not} gauge-removable, and the monodromy obstruction described above is robust.
 
-\section{The Stern--Gerlach Analogue: Physical Realization of Rotational Dissipation}
+\section{The Stern--Gerlach Analogue: Physical Realization of Rotational Dissipation} \label{sec:physical-interpretation}
 
 The Monodromy Obstruction proves the mathematical necessity of a non-compact temporal 
 channel, but the physical mechanism by which rotational stress manifests and resolves 
@@ -476,7 +453,7 @@ magnitudes at different scales.
     \item The viscous term in the Navier–Stokes $\to$ Schr\"odinger–Pauli mapping is represented by an effective local imaginary potential $V_I(\mathbf{x},\tau)$ as in Eq.~\eqref{eq:HE_decomp}, valid in the coarse-grained semiclassical limit.
     \item The dominant Euclidean saddle is $\tau$-independent to leading order (quasi-stationary approximation).
 \end{enumerate}
-\emph{Then: if the time-averaged imaginary potential $\overline{V_I}$ is non-zero and not gauge-exact on the thermal circle, the Euclidean monodromy operator $\mathcal{M}$ fails Reflection Positivity. Consequently, a non-compact temporal channel (Minkowski signature) is required to restore spectral stability.}
+\emph{Then: if the time-averaged imaginary potential $\overline{V_I}$ is non-zero and not gauge-exact on the thermal circle, the Euclidean monodromy operator $\mathcal{M}$ violates Reflection Positivity (cf. OS2). Consequently, a non-compact temporal channel (Minkowski signature) is required to restore spectral stability.}
 
 \begin{equation}
 \boxed{
@@ -530,7 +507,7 @@ is the thermally-averaged macroscopic signature of this fundamental quantum proc
 \end{enumerate}
 
 \paragraph{OS axioms and reflection positivity.}
-The Osterwalder--Schrader framework identifies reflection positivity as the structural condition that permits Euclidean Schwinger functions to reconstruct a unitary Lorentzian theory~\cite{NeebOlafsson2018}.  Our monodromy obstruction should therefore be read not as a mere failure of a chosen contour for Wick rotation, but as a dynamical violation of OS2: the anti-Hermitian horizon source induced by rotation produces complex eigenvalues for the Euclidean evolution operator and thus generates an indefinite sesquilinear form for the would-be OS inner product.  Concretely, the spectral winding visible in Figure~1. furnishes explicit eigenmodes for which the RP quadratic form fails, so that OS reconstruction cannot proceed.  In this sense the signature flip is not an analytic convenience but the physically required resolution to a spectral inconsistency that prevents a compact Euclidean thermal state.
+The Osterwalder--Schrader framework identifies reflection positivity as the structural condition that permits Euclidean Schwinger functions to reconstruct a unitary Lorentzian theory~\cite{NeebOlafsson2018}.  Our monodromy obstruction should therefore be read not as a mere failure of a chosen contour for Wick rotation, but as a dynamical violation of OS2: the anti-Hermitian horizon source induced by rotation produces complex eigenvalues for the Euclidean evolution operator and thus generates an indefinite sesquilinear form for the would-be OS inner product.  Concretely, the spectral winding visible in Figure~1. furnishes explicit eigenmodes for which the RP quadratic form violates OS axioms, preventing reconstruction.  In this sense the signature flip is not an analytic convenience but the physically required resolution to a spectral inconsistency that prevents a compact Euclidean thermal state.
 
 \paragraph{Clarifying the logical structure.}
 The Osterwalder--Schrader axioms do not \emph{define} the Wick rotation but rather specify the conditions under which analytic continuation between Euclidean and Lorentzian theories is mathematically well-posed.  Reflection positivity, in particular, guarantees that the Euclidean evolution operator corresponds to a Hermitian generator of time translations after continuation.  In the present framework, the breakdown of reflection positivity is therefore not assumed but \emph{derived}: rotation introduces an anti--Hermitian component that drives the Euclidean spectrum off the real axis, violating the positivity condition required by the OS correspondence.  The resulting failure of analytic continuation is thus a dynamical effect---a physical obstruction to the existence of a Hermitian temporal generator---rather than a circular restatement of the Wick rotation’s premises.  This distinction is essential: the monodromy obstruction identifies when Euclidean regularity ceases to be physically meaningful, not merely when it is algebraically inconvenient.
@@ -575,10 +552,7 @@ illustrates the spectral imprint of the Monodromy Obstruction.
 \begin{figure}[h!]
     \centering
     \includegraphics[width=0.6\linewidth]{monodromy_spiral.png}
-    \caption{Eigenvalue spectrum of the Euclidean monodromy operator 
-    $\mathcal{M} = e^{-\beta H_E}$ for the toy model of 
-    Appendix~\ref{app:operator-toy}, with parameters 
-    $\nu = 0.1$, $\beta = 10$, $L = 1$.}
+    \caption{Eigenvalue spectrum of the Euclidean monodromy operator $\mathcal{M} = e^{-\beta H_E}$ for the \textbf{one-dimensional toy model of Appendix~\ref{app:operator-toy}} with parameters $\nu = 0.1$, $\beta = 10$, $L = 1$. This simplified system exhibits the same spectral structure (complex eigenvalue spiral) as the full Kerr geometry, demonstrating that the monodromy obstruction is generic to rotation + viscosity.}
     \label{fig:monodromy_spiral}
 \end{figure}
 
@@ -588,6 +562,8 @@ The spiral represents a continuous interpolation between purely Euclidean therma
 
 In the fluid/gravity correspondence, the spiral reflects the complex relaxation spectrum of the non-Hermitian Navier-Stokes operator, directly analogous to black hole quasinormal mode frequencies in the complex plane. The inward winding represents dissipative decay, while the angular advance corresponds to the emergent Minkowski channel that resolves the compact-time incompatibility. The monodromy spiral therefore provides a direct spectral visualization of signature emergence—the transition from real (Euclidean) eigenvalues to complex (Lorentzian) spectra under rotation.
 
+\subsection*{Physical Interpretation of Wick Rotation}
+Although Wick rotation was historically introduced as an analytic convenience, its periodicity in imaginary time, $\beta = 1/T$, encodes a genuine physical structure: thermal compactification. In Euclidean space, the path integral weights configurations by $e^{-S_E}$, favoring mode clusters that approximate thermal equilibrium. This explains why Euclidean formulations naturally resemble statistical ensembles: the compact time dimension encodes dissipative dynamics rather than arbitrary geometry. Lorentzian unitarity then emerges through analytic continuation, where interference points correspond to real-time evolution. This duality clarifies the utility of Wick rotation in gravitational thermodynamics and connects directly to signature emergence: when rotational stress obstructs Euclidean smoothness, the system must open a non-compact temporal channel to restore dissipation and spectral stability. Wick rotation is therefore not a mere calculational trick but the mathematical shadow of a physical process linking thermalization, geometry, and causality.
 
 \subsection{Implications}
 
@@ -678,13 +654,19 @@ and non-Hermitian analysis.
 
 \end{itemize}
 
-The central finding is that \textbf{spacetime signature is not fundamental but 
-emergent}, selected by physical dynamics (rotation, dissipation) rather than imposed 
-by fiat. This reframes the Wick rotation from an analytical trick to the mathematical 
-shadow of a real physical process---the quantum-geometric resolution of rotational 
-incompatibility.
+The central finding is that spacetime signature is not fundamental but emergent, selected by physical dynamics (rotation, dissipation) rather than imposed by fiat. This reframes the Wick rotation from an analytical trick to the mathematical shadow of a real physical process—the quantum-geometric resolution of rotational incompatibility.
 
-\bibliographystyle{plain}
+If signature transitions arise from physical necessity rather than mathematical convenience, the configurations summed over in Euclidean path integrals may correspond to actual geometric phases in quantum evolution, not merely integration contours. While this work focuses on the black hole context, the mechanism suggests that the relationship between Euclidean and Lorentzian descriptions in quantum field theory reflects an underlying physical duality rather than a formal calculational device. The sum-over-histories may be more ontologically direct than traditionally assumed.
+
+\section*{Acknowledgments and Methodological Transparency}
+
+This research was conducted through extensive collaboration with large language models (Claude 4.5 Sonnet by Anthropic, ChatGPT-5 by OpenAI, Gemini 2.5 by Google, and Microsoft Copilot) as intellectual partners throughout the entire research process. The author is self-taught in theoretical physics beyond undergraduate calculus, and LLMs served as essential collaborators for: mathematical formulation and dimensional analysis, literature review and connection to established frameworks (Osterwalder-Schrader, Berry phase theory, fluid/gravity correspondence), derivation verification and consistency checking, LaTeX typesetting and formatting, and iterative manuscript revision and argumentation refinement.
+
+The core physical intuition—that global rotation necessarily induces dissipation (from seeing multiscale model overlap), necessitating signature emergence—originated with the author.The specific algebraic topology formulation as monodromy obstruction, connecting this insight to rigorous proof was developed dialogically with AI systems. All derivations were verified through multiple independent conversations with different LLM instances, and the author takes full responsibility for any errors in physical interpretation or mathematical reasoning.
+
+This methodological approach represents an emerging paradigm in scientific research, where AI systems function as tireless collaborators enabling individuals without traditional institutional support to contribute to theoretical physics. The author believes transparency about LLM assistance is essential for the integrity of this new research modality and hopes this documentation contributes to developing ethical standards for AI-assisted scientific work.
+
+\bibliographystyle{unsrt}
 \bibliography{references}
 
 \appendix
@@ -758,7 +740,7 @@ The Euclidean monodromy over one period $\beta$ is $\mathcal M = e^{-\beta H_E}$
     \Lambda_n = e^{-\beta[(1 - i\nu)k_n^2 + \bar V_0]}
               = e^{-\beta(E_n)} e^{-i\beta\nu k_n^2}.
 \]
-The second factor produces complex phases unless $\beta\nu k_n^2\in2\pi\mathbb Z$ for all $n$, which is generically impossible.  Therefore $\mathcal M$ is not positive and fails reflection positivity.
+The second factor produces complex phases unless $\beta\nu k_n^2\in2\pi\mathbb Z$ for all $n$, which is generically impossible.  Therefore $\mathcal M$ is not positive and violates reflection positivity (cf. OS2).
 
 The eigenvalues trace a logarithmic spiral in the complex plane (shown in Figure~\ref{fig:monodromy_spiral}), with the inward winding representing Euclidean damping $e^{-\beta E_n}$ and the angular advance representing the non-Hermitian phase $e^{-i\beta\nu k_n^2}$. This spiral geometry confirms that no real, positive spectrum can be recovered, demonstrating that the Euclidean state space is not self-adjoint under rotation.
 
@@ -1155,7 +1137,7 @@ Define a complex wave function from the velocity field:
 \begin{equation}
 \psi(\mathbf{x},t) = \sqrt{\rho} \exp(iS/\hbar_{\text{eff}})
 \end{equation}
-where $S$ is the velocity potential ($\mathbf{u} = \nabla S$) and $\hbar_{\text{eff}}$ is an effective Planck constant.
+where $S$ is the velocity potential ($\mathbf{u} = \nabla S$) and $\hbar_{\text{eff}}$ is an effective Planck constant. After Wick rotation $t \to -i\tau$, this becomes $\psi(x,\tau)$ in the Euclidean formulation used throughout the main text.
 
 The probability density and current are:
 \begin{align}
